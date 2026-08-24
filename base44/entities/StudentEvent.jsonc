@@ -1,0 +1,71 @@
+{
+  "name": "StudentEvent",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Student's full name"
+    },
+    "email": {
+      "type": "string",
+      "description": "Student's email address"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Student's phone number"
+    },
+    "college": {
+      "type": "string",
+      "description": "College/University name"
+    },
+    "year": {
+      "type": "string",
+      "enum": [
+        "1st Year",
+        "2nd Year",
+        "3rd Year",
+        "4th Year",
+        "Graduate"
+      ],
+      "description": "Current year of study"
+    },
+    "field_of_study": {
+      "type": "string",
+      "description": "Field/Branch of study"
+    },
+    "event_interest": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Areas of interest for the event"
+    },
+    "referral_code": {
+      "type": "string",
+      "description": "Referral code if any"
+    },
+    "registration_date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Registration timestamp"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "registered",
+        "confirmed",
+        "attended",
+        "cancelled"
+      ],
+      "default": "registered",
+      "description": "Registration status"
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "phone",
+    "college",
+    "year"
+  ]
+}

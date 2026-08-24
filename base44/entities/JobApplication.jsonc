@@ -1,0 +1,108 @@
+{
+  "name": "JobApplication",
+  "type": "object",
+  "properties": {
+    "job_title": {
+      "type": "string",
+      "description": "Title of the job applied for"
+    },
+    "company_name": {
+      "type": "string",
+      "description": "Name of the company"
+    },
+    "job_url": {
+      "type": "string",
+      "description": "URL of the job posting"
+    },
+    "application_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when application was submitted"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "applied",
+        "screening",
+        "interview",
+        "offer",
+        "rejected",
+        "withdrawn"
+      ],
+      "default": "applied",
+      "description": "Current status of the application"
+    },
+    "resume_used": {
+      "type": "string",
+      "description": "ID of the resume used for this application"
+    },
+    "cover_letter": {
+      "type": "string",
+      "description": "Cover letter text used"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Personal notes about the application"
+    },
+    "contact_person": {
+      "type": "string",
+      "description": "Name of recruiter/contact person"
+    },
+    "salary_range": {
+      "type": "string",
+      "description": "Salary range for the position"
+    },
+    "interview_dates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "round": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "type": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "job_title",
+    "company_name",
+    "application_date"
+  ],
+  "rls": {
+    "read": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "write": {
+      "$or": [
+        {
+          "created_by": "{{user.email}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    }
+  }
+}
