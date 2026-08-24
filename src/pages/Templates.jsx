@@ -293,7 +293,7 @@ export default function Templates() {
               </Card>
             </Link>
 
-            <Link to={createPageUrl("Templates")} className="sm:col-span-2 lg:col-span-1">
+            <Link to={createPageUrl("Dashboard")} className="sm:col-span-2 lg:col-span-1">
               <Card className="hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-orange-200 group cursor-pointer">
                 <CardContent className="p-4 sm:p-6 text-center">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl mx-auto mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">

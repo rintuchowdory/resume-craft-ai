@@ -49,6 +49,9 @@ export default function Editor() {
   useEffect(() => {
     if (resumeId) {
       loadResume();
+    } else {
+      // No resume id in the URL — nothing to load, stop the spinner.
+      setIsLoading(false);
     }
   }, [resumeId, loadResume]); // `loadResume` is now a dependency here.
 

@@ -9,5 +9,6 @@ export const base44 = createClient({
   serverUrl,
   token,
   functionsVersion,
-  requiresAuth: false
+  requiresAuth: false,
+  appBaseUrl: serverUrl // redirect auth to Base44, not the GitHub Pages URL
 });

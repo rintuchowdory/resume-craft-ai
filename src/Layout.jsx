@@ -150,7 +150,7 @@ export default function Layout({ children, currentPageName }) {
 
   const handleLogin = async () => {
     try {
-      await User.loginWithRedirect(window.location.href);
+      base44.auth.redirectToLogin(window.location.href);
     } catch (error) {
       console.error("Login error:", error);
     }
