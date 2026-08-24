@@ -34,6 +34,7 @@ jobs:
         run: npx vite build --base=/resume-craft-ai/
         env:
           NODE_ENV: production
+          BASE44_LEGACY_SDK_IMPORTS: 'true'
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
