@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { Resume } from "@/entities/Resume";
-import { InvokeLLM } from "@/integrations/Core";
+import { InvokeLLM } from "@/api/llm";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";

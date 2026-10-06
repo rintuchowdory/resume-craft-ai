@@ -1,6 +1,6 @@
 
 import React, { useState, useRef, useCallback } from "react";
-import { UploadFile, InvokeLLM, GenerateImage } from "@/integrations/Core";
+import { UploadFile, InvokeLLM, GenerateImage } from "@/api/llm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";

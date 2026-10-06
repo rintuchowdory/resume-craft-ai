@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { InvokeLLM } from "@/integrations/Core";
+import { InvokeLLM } from "@/api/llm";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
