@@ -156,3 +156,51 @@ button:focus-visible {
     @apply bg-background text-foreground;
   }
 }
+
+
+/* ============================================================
+   DARK THEME REMAP — the app was built with hardcoded light
+   Tailwind utilities. The shadcn components follow the .dark
+   token block (class "dark" on <html>); these rules remap the
+   remaining hardcoded gray/green utilities to dark equivalents.
+   Appended after @tailwind utilities so they win the cascade.
+   ============================================================ */
+
+body {
+  background-color: hsl(var(--background));
+  color: #f2f2f2;
+}
+
+/* surfaces that were white */
+.bg-white { background-color: #161616 !important; }
+.bg-white\/90 { background-color: rgba(22, 22, 22, 0.95) !important; }
+.bg-white\/80 { background-color: rgba(18, 18, 18, 0.88) !important; }
+.bg-white\/70 { background-color: rgba(18, 18, 18, 0.82) !important; }
+.bg-white\/60 { background-color: rgba(18, 18, 18, 0.75) !important; }
+.bg-white\/50 { background-color: rgba(20, 20, 20, 0.6) !important; }
+.bg-white\/20 { background-color: rgba(255, 255, 255, 0.05) !important; }
+.bg-white\/10 { background-color: rgba(255, 255, 255, 0.04) !important; }
+
+/* gray surfaces */
+.bg-gray-50 { background-color: #171717 !important; }
+.bg-gray-100 { background-color: #1c1c1c !important; }
+.bg-gray-200 { background-color: #2a2a2a !important; }
+.bg-green-50 { background-color: rgba(34, 197, 94, 0.1) !important; }
+
+/* text that was dark ink */
+.text-gray-900 { color: #f5f5f5 !important; }
+.text-gray-800 { color: #e9e9e9 !important; }
+.text-gray-700 { color: #d8d8d8 !important; }
+.text-gray-600 { color: #b8b8b8 !important; }
+.text-gray-500 { color: #9a9a9a !important; }
+.text-gray-400 { color: #828282 !important; }
+.text-gray-300 { color: #6e6e6e !important; }
+.text-gray-200 { color: #5d5d5d !important; }
+
+/* borders */
+.border-gray-200 { border-color: #2d2d2d !important; }
+.border-gray-300 { border-color: #3a3a3a !important; }
+.border-green-100 { border-color: rgba(34, 197, 94, 0.15) !important; }
+.border-green-200 { border-color: rgba(34, 197, 94, 0.25) !important; }
+.border-green-200\/30 { border-color: rgba(34, 197, 94, 0.15) !important; }
+.border-green-200\/50 { border-color: rgba(34, 197, 94, 0.2) !important; }
