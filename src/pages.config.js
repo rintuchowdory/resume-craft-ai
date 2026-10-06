@@ -13,6 +13,8 @@ import Profile from './pages/Profile';
 import JobDetails from './pages/JobDetails';
 import PhotoEditor from './pages/PhotoEditor';
 import PDFTools from './pages/PDFTools';
+import ATSChecker from './pages/ATSChecker';
+import CoverLetter from './pages/CoverLetter';
 import StudentEventLanding from './pages/StudentEventLanding';
 import EventDetails from './pages/EventDetails';
 import Layout from './Layout.jsx';
@@ -34,6 +36,8 @@ export const PAGES = {
     "JobDetails": JobDetails,
     "PhotoEditor": PhotoEditor,
     "PDFTools": PDFTools,
+    "ATSChecker": ATSChecker,
+    "CoverLetter": CoverLetter,
     "StudentEventLanding": StudentEventLanding,
     "EventDetails": EventDetails,
 }

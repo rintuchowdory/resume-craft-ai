@@ -181,6 +181,8 @@ export default function Layout({ children, currentPageName }) {
               {/* Navigation Links */}
               <div className="hidden md:flex items-center space-x-8">
                 <Link to={createPageUrl("Templates")} className="text-gray-600 hover:text-green-600 transition-colors">Templates</Link>
+                <Link to={createPageUrl("ATSChecker")} className="text-gray-600 hover:text-green-600 transition-colors">ATS Checker</Link>
+                <Link to={createPageUrl("CoverLetter")} className="text-gray-600 hover:text-green-600 transition-colors">Cover Letter</Link>
                 <Link to={createPageUrl("Jobs")} className="text-gray-600 hover:text-green-600 transition-colors">Jobs</Link>
                 <Link to={createPageUrl("News")} className="text-gray-600 hover:text-green-600 transition-colors">News</Link>
                 <Link to={createPageUrl("About")} className="text-gray-600 hover:text-green-600 transition-colors">About</Link>
@@ -276,6 +278,8 @@ export default function Layout({ children, currentPageName }) {
                   <li><Link to={createPageUrl("Templates")} className="hover:text-green-400 transition-colors">Resume Templates</Link></li>
                   <li><Link to={createPageUrl("Jobs")} className="hover:text-green-400 transition-colors">Job Board</Link></li>
                   <li><Link to={createPageUrl("JobMatcher")} className="hover:text-green-400 transition-colors">Job Matcher</Link></li>
+                    <li><Link to={createPageUrl("ATSChecker")} className="hover:text-green-400 transition-colors">ATS Resume Checker</Link></li>
+                    <li><Link to={createPageUrl("CoverLetter")} className="hover:text-green-400 transition-colors">Cover Letter Generator</Link></li>
                   <li><Link to={createPageUrl("News")} className="hover:text-green-400 transition-colors">Career News</Link></li>
                 </ul>
               </div>
