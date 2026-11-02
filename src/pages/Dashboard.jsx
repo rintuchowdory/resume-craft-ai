@@ -3,7 +3,6 @@ import { Resume } from "@/entities/Resume";
 import { Button } from "@/components/ui/button";
 import {
   ArrowUpRight,
-  Download,
   Eye,
   FileText,
   Gauge,
@@ -13,7 +12,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { createPageHref, createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
 import {
@@ -134,7 +133,7 @@ export default function Dashboard() {
         projects: [],
         ats_score: 0
       });
-      window.location.href = createPageUrl(`Editor?id=${newResume.id}`);
+      window.location.href = createPageHref(`Editor?id=${newResume.id}`);
     } catch (error) {
       console.error("Error creating resume:", error);
     }
@@ -488,14 +487,6 @@ export default function Dashboard() {
                         Edit
                       </Button>
                     </Link>
-                    <Button
-                      size="sm"
-                      variant="outline"
-                      aria-label={`Download ${resume.title}`}
-                      className="rounded-lg border-white/12 bg-white/[0.03] text-white/70 transition hover:border-emerald-400/40 hover:text-white"
-                    >
-                      <Download className="h-4 w-4" />
-                    </Button>
                   </div>
                 </motion.article>
               ))}

@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Sparkles, Eye, Download, Plus, Star, Palette, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { createPageHref, createPageUrl } from "@/utils";
 
 const templates = [
   {
@@ -122,7 +122,7 @@ export default function Templates() {
         ats_score: 0
       });
       
-      window.location.href = createPageUrl(`Editor?id=${newResume.id}`);
+      window.location.href = createPageHref(`Editor?id=${newResume.id}`);
     } catch (error) {
       console.error("Error creating resume:", error);
     }

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { createPageHref, createPageUrl } from "@/utils";
 import { User } from "@/entities/User";
 import { FileText, Home, Settings, Download, Sparkles, User as UserIcon, Target, Mail, Info, Heart, Briefcase, TrendingUp, LogOut, Settings as SettingsIcon, Bell, Search } from "lucide-react";
 import {
@@ -142,7 +142,7 @@ export default function Layout({ children, currentPageName }) {
       await User.logout();
       setCurrentUser(null);
       setIsGuestMode(true);
-      window.location.href = createPageUrl("Home");
+      window.location.href = createPageHref("Home");
     } catch (error) {
       console.error("Logout error:", error);
     }

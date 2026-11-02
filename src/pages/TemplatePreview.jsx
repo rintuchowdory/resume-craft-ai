@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Resume } from "@/entities/Resume";
 import { ArrowLeft, Download, Plus } from "lucide-react";
 import { Link } from "react-router-dom";
-import { createPageUrl } from "@/utils";
+import { createPageHref, createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 
 const sampleData = {
@@ -101,7 +101,7 @@ export default function TemplatePreview() {
         ats_score: 0
       });
       
-      window.location.href = createPageUrl(`Editor?id=${newResume.id}`);
+      window.location.href = createPageHref(`Editor?id=${newResume.id}`);
     } catch (error) {
       console.error("Error creating resume:", error);
     }
