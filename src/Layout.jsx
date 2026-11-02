@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { createPageHref, createPageUrl } from "@/utils";
 import { User } from "@/entities/User";
+import { base44 } from "@/api/base44Client";
 import { FileText, Home, Settings, Download, Sparkles, User as UserIcon, Target, Mail, Info, Heart, Briefcase, TrendingUp, LogOut, Settings as SettingsIcon, Bell, Search } from "lucide-react";
 import {
   Sidebar,
