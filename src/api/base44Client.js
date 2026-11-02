@@ -10,5 +10,7 @@ export const base44 = createClient({
   token,
   functionsVersion,
   requiresAuth: false,
-  appBaseUrl: serverUrl // redirect auth to Base44, not the GitHub Pages URL
+  // Auth pages live on the Base44 web app host; the API host (serverUrl)
+  // answers /login with "App not found".
+  appBaseUrl: import.meta.env.VITE_BASE44_APP_BASE_URL || "https://app.base44.com"
 });
