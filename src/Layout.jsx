@@ -164,7 +164,7 @@ export default function Layout({ children, currentPageName }) {
     return (
       <div>
         {/* Top Navigation Bar for Landing */}
-        <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-green-200/30">
+        <nav className="fixed top-0 z-50 w-full border-b border-white/[0.06] bg-[#070b09]/80 backdrop-blur-xl">
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               {/* Logo */}
@@ -173,20 +173,20 @@ export default function Layout({ children, currentPageName }) {
                   <FileText className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h1 className="font-bold text-xl text-gray-900">ResumeAI</h1>
-                  <p className="text-xs text-gray-500">AI-Powered Resume Builder</p>
+                  <h1 className="text-xl font-bold text-white">ResumeAI</h1>
+                  <p className="text-xs text-white/45">AI-Powered Resume Builder</p>
                 </div>
               </Link>
 
               {/* Navigation Links */}
               <div className="hidden md:flex items-center space-x-8">
-                <Link to={createPageUrl("Templates")} className="text-gray-600 hover:text-green-600 transition-colors">Templates</Link>
-                <Link to={createPageUrl("ATSChecker")} className="text-gray-600 hover:text-green-600 transition-colors">ATS Checker</Link>
-                <Link to={createPageUrl("CoverLetter")} className="text-gray-600 hover:text-green-600 transition-colors">Cover Letter</Link>
-                <Link to={createPageUrl("Jobs")} className="text-gray-600 hover:text-green-600 transition-colors">Jobs</Link>
-                <Link to={createPageUrl("News")} className="text-gray-600 hover:text-green-600 transition-colors">News</Link>
-                <Link to={createPageUrl("About")} className="text-gray-600 hover:text-green-600 transition-colors">About</Link>
-                <Link to={createPageUrl("Contact")} className="text-gray-600 hover:text-green-600 transition-colors">Contact</Link>
+                <Link to={createPageUrl("Templates")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Templates</Link>
+                <Link to={createPageUrl("ATSChecker")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">ATS Checker</Link>
+                <Link to={createPageUrl("CoverLetter")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Cover Letter</Link>
+                <Link to={createPageUrl("Jobs")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Jobs</Link>
+                <Link to={createPageUrl("News")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">News</Link>
+                <Link to={createPageUrl("About")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">About</Link>
+                <Link to={createPageUrl("Contact")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Contact</Link>
               </div>
 
               {/* Auth Buttons */}
@@ -232,10 +232,17 @@ export default function Layout({ children, currentPageName }) {
                   </DropdownMenu>
                 ) : (
                   <>
-                    <Button variant="ghost" onClick={handleLogin}>
+                    <Button
+                      variant="ghost"
+                      onClick={handleLogin}
+                      className="text-white/70 hover:bg-white/[0.06] hover:text-white"
+                    >
                       Log In
                     </Button>
-                    <Button onClick={handleLogin} className="bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700">
+                    <Button
+                      onClick={handleLogin}
+                      className="rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 font-semibold text-[#04120c] hover:from-emerald-300 hover:to-teal-400"
+                    >
                       Get Started
                     </Button>
                   </>
@@ -251,7 +258,7 @@ export default function Layout({ children, currentPageName }) {
         </div>
 
         {/* Enhanced Footer */}
-        <footer className="bg-gray-900 text-white py-16">
+        <footer className="border-t border-white/[0.06] bg-[#050806] py-16 text-white">
           <div className="container mx-auto px-6">
             <div className="grid md:grid-cols-4 gap-8">
               <div>
@@ -321,16 +328,16 @@ export default function Layout({ children, currentPageName }) {
 
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-gradient-to-br from-slate-50 to-green-50">
-        <Sidebar className="border-r border-green-200/30 bg-white/80 backdrop-blur-sm">
-          <SidebarHeader className="border-b border-green-200/30 p-6">
+      <div className="flex min-h-screen w-full bg-[#070b09]">
+        <Sidebar className="border-r border-white/[0.06] bg-[#0a110e]/95 backdrop-blur-xl">
+          <SidebarHeader className="border-b border-white/[0.06] p-5">
             <Link to={createPageUrl("Home")} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
                 <FileText className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h2 className="font-bold text-gray-900 text-lg">ResumeAI</h2>
-                <p className="text-sm text-gray-500">AI Resume Builder</p>
+                <h2 className="text-lg font-bold text-white">ResumeAI</h2>
+                <p className="text-sm text-white/45">AI Resume Builder</p>
               </div>
             </Link>
           </SidebarHeader>
@@ -338,17 +345,17 @@ export default function Layout({ children, currentPageName }) {
           <SidebarContent className="p-4">
             {/* Guest Mode Notice */}
             {isGuestMode && (
-              <div className="bg-gradient-to-r from-yellow-50 to-orange-50 border border-yellow-200 rounded-lg p-4 mb-6">
-                <h3 className="font-semibold text-yellow-800 text-sm mb-2">🎯 Guest Mode</h3>
-                <p className="text-yellow-700 text-xs mb-3">You're browsing as a guest. Sign up for full features!</p>
-                <Button size="sm" onClick={handleLogin} className="w-full bg-gradient-to-r from-green-500 to-emerald-600">
+              <div className="mb-6 rounded-xl border border-amber-400/25 bg-amber-400/[0.07] p-4">
+                <h3 className="mb-2 text-sm font-semibold text-amber-200">Guest mode</h3>
+                <p className="mb-3 text-xs text-amber-200/70">You're browsing as a guest. Sign up for full features!</p>
+                <Button size="sm" onClick={handleLogin} className="w-full rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 font-semibold text-[#04120c]">
                   Sign Up Free
                 </Button>
               </div>
             )}
 
             <SidebarGroup>
-              <SidebarGroupLabel className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2 py-3">
+              <SidebarGroupLabel className="px-2 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
                 Main Features
               </SidebarGroupLabel>
               <SidebarGroupContent>
@@ -359,8 +366,8 @@ export default function Layout({ children, currentPageName }) {
                       <SidebarMenuItem key={item.title}>
                         <SidebarMenuButton 
                           asChild={!isRestricted}
-                          className={`hover:bg-green-50 hover:text-green-700 transition-all duration-300 rounded-xl mb-2 group ${
-                            location.pathname === item.url ? 'bg-green-100 text-green-800 shadow-sm' : ''
+                          className={`group mb-1.5 rounded-xl text-white/60 transition-all duration-300 hover:bg-white/[0.06] hover:text-white ${
+                            location.pathname === item.url ? 'bg-emerald-400/10 text-emerald-200 ring-1 ring-emerald-400/25' : ''
                           } ${isRestricted ? 'opacity-50' : ''}`}
                           onClick={isRestricted ? handleLogin : undefined}
                         >
@@ -385,7 +392,7 @@ export default function Layout({ children, currentPageName }) {
             </SidebarGroup>
 
             <SidebarGroup>
-              <SidebarGroupLabel className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2 py-3">
+              <SidebarGroupLabel className="px-2 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
                 Information
               </SidebarGroupLabel>
               <SidebarGroupContent>
@@ -394,8 +401,8 @@ export default function Layout({ children, currentPageName }) {
                     <SidebarMenuItem key={item.title}>
                       <SidebarMenuButton 
                         asChild 
-                        className={`hover:bg-blue-50 hover:text-blue-700 transition-all duration-300 rounded-xl mb-2 group ${
-                          location.pathname === item.url ? 'bg-blue-100 text-blue-800 shadow-sm' : ''
+                        className={`group mb-1.5 rounded-xl text-white/60 transition-all duration-300 hover:bg-white/[0.06] hover:text-white ${
+                          location.pathname === item.url ? 'bg-sky-400/10 text-sky-200 ring-1 ring-sky-400/25' : ''
                         }`}
                       >
                         <Link to={item.url} className="flex items-center gap-3 px-4 py-3">
@@ -411,19 +418,20 @@ export default function Layout({ children, currentPageName }) {
 
             {!isGuestMode && (
               <SidebarGroup>
-                <SidebarGroupLabel className="text-xs font-semibold text-gray-500 uppercase tracking-wider px-2 py-3">
+                <SidebarGroupLabel className="px-2 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
                   Quick Stats
                 </SidebarGroupLabel>
                 <SidebarGroupContent>
                   <div className="px-3 py-2 space-y-2">
-                    <div className="flex items-center gap-2 text-sm">
-                      <FileText className="w-4 h-4 text-gray-400" />
-                      <span className="text-gray-600">Resumes</span>
-                      <span className="ml-auto font-semibold">3</span>
+                    <div className="flex items-center gap-2 rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2 text-sm">
+                      <FileText className="h-4 w-4 text-emerald-400" />
+                      <span className="text-white/55">Resumes</span>
+                      <span className="ml-auto font-semibold text-white">3</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm">
-                      <span className="text-gray-600">Avg ATS Score</span>
-                      <span className="ml-auto font-semibold text-green-600">94%</span>
+                    <div className="flex items-center gap-2 rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2 text-sm">
+                      <Target className="h-4 w-4 text-sky-400" />
+                      <span className="text-white/55">Avg ATS Score</span>
+                      <span className="ml-auto font-semibold text-emerald-300">94%</span>
                     </div>
                   </div>
                 </SidebarGroupContent>
@@ -431,7 +439,7 @@ export default function Layout({ children, currentPageName }) {
             )}
           </SidebarContent>
 
-          <SidebarFooter className="border-t border-green-200/30 p-6">
+          <SidebarFooter className="border-t border-white/[0.06] p-4">
             {currentUser ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -442,11 +450,11 @@ export default function Layout({ children, currentPageName }) {
                         alt={currentUser.full_name}
                         fallback={currentUser.full_name?.charAt(0) || 'U'}
                         className="h-10 w-10"
-                        fallbackClassName="bg-gradient-to-r from-green-100 to-emerald-100 text-green-700"
+                        fallbackClassName="bg-emerald-400/15 text-emerald-200"
                       />
                       <div className="flex-1 min-w-0 text-left">
-                        <p className="font-semibold text-gray-900 text-sm truncate">{currentUser.full_name}</p>
-                        <p className="text-xs text-gray-500 truncate">{currentUser.email}</p>
+                        <p className="truncate text-sm font-semibold text-white">{currentUser.full_name}</p>
+                        <p className="truncate text-xs text-white/45">{currentUser.email}</p>
                       </div>
                     </div>
                   </Button>
@@ -473,10 +481,10 @@ export default function Layout({ children, currentPageName }) {
               </DropdownMenu>
             ) : (
               <div className="space-y-2">
-                <Button onClick={handleLogin} className="w-full bg-gradient-to-r from-green-500 to-emerald-600">
+                <Button onClick={handleLogin} className="w-full rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 font-semibold text-[#04120c]">
                   Sign In
                 </Button>
-                <p className="text-xs text-center text-gray-500">
+                <p className="text-center text-xs text-white/40">
                   Join thousands of users!
                 </p>
               </div>
@@ -485,14 +493,14 @@ export default function Layout({ children, currentPageName }) {
         </Sidebar>
 
         <main className="flex-1 flex flex-col">
-          <header className="bg-white/60 backdrop-blur-md border-b border-green-200/30 px-6 py-4 md:hidden">
+          <header className="border-b border-white/[0.06] bg-[#070b09]/85 px-5 py-4 backdrop-blur-xl md:hidden">
             <div className="flex items-center gap-4">
-              <SidebarTrigger className="hover:bg-green-50 p-2 rounded-xl transition-colors duration-300" />
+              <SidebarTrigger className="rounded-xl p-2 text-white/70 transition-colors duration-300 hover:bg-white/[0.06] hover:text-white" />
               <Link to={createPageUrl("Home")} className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-lg flex items-center justify-center">
                   <FileText className="w-5 h-5 text-white" />
                 </div>
-                <h1 className="text-xl font-bold text-gray-900">ResumeAI</h1>
+                <h1 className="text-xl font-bold text-white">ResumeAI</h1>
               </Link>
             </div>
           </header>
