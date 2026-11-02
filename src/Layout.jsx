@@ -151,9 +151,13 @@ export default function Layout({ children, currentPageName }) {
 
   const handleLogin = async () => {
     try {
-      base44.auth.redirectToLogin(window.location.href);
+      // loginWithProvider carries the app_id, so Base44 knows which app the
+      // returning token belongs to. redirectToLogin drops it, which ends in the
+      // user authenticating against no app at all and being bounced back.
+      base44.auth.loginWithProvider("google", window.location.href);
     } catch (error) {
       console.error("Login error:", error);
+      base44.auth.redirectToLogin(window.location.href);
     }
   };
 
