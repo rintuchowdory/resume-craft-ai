@@ -34,7 +34,6 @@ jobs:
         run: npx vite build --base=/resume-craft-ai/
         env:
           NODE_ENV: production
-          BASE44_LEGACY_SDK_IMPORTS: 'true'
           VITE_BASE44_APP_ID: '6a8ccb0ced954fcc94563592'
           VITE_BASE44_BACKEND_URL: 'https://base44.app'
 
