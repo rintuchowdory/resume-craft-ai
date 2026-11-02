@@ -361,7 +361,7 @@ body {
 }
 
 .text-gradient-mint {
-  background: linear-gradient(100deg, #f4fbf7 8%, #6ee7b7 52%, #67e8f9 96%);
+  background: linear-gradient(100deg, #ffffff 0%, #34d399 42%, #22d3ee 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
