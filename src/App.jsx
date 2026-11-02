@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import './App.css'
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
@@ -20,6 +21,7 @@ const LayoutWrapper = ({ children, currentPageName }) => Layout ?
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, isAuthenticated, navigateToLogin } = useAuth();
+  const [guestOverride, setGuestOverride] = useState(false);
 
   // Show loading spinner while checking app public settings or auth
   if (isLoadingPublicSettings || isLoadingAuth) {
@@ -30,14 +32,37 @@ const AuthenticatedApp = () => {
     );
   }
 
-  // Handle authentication errors
-  if (authError) {
+  // Handle authentication errors. Never bounce silently: show what happened and
+  // let the visitor keep working without an account.
+  if (authError && !guestOverride) {
     if (authError.type === 'user_not_registered') {
       return <UserNotRegisteredError />;
     } else if (authError.type === 'auth_required') {
-      // Redirect to login automatically
-      navigateToLogin();
-      return null;
+      return (
+        <div className="fixed inset-0 flex items-center justify-center bg-[#070b09] p-6">
+          <div className="w-full max-w-md rounded-2xl border border-white/10 bg-white/[0.03] p-8 text-center">
+            <h1 className="text-xl font-semibold text-white">Sign-in was not completed</h1>
+            <p className="mt-3 text-sm leading-relaxed text-white/60">
+              Base44 did not confirm a session for this app. You can keep using the builder
+              without an account, or try signing in again.
+            </p>
+            <div className="mt-6 flex flex-col gap-3">
+              <button
+                onClick={() => setGuestOverride(true)}
+                className="rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 px-4 py-2.5 text-sm font-semibold text-[#04120c]"
+              >
+                Continue without an account
+              </button>
+              <button
+                onClick={() => navigateToLogin()}
+                className="rounded-lg border border-white/15 px-4 py-2.5 text-sm font-medium text-white/80 hover:bg-white/5"
+              >
+                Try signing in again
+              </button>
+            </div>
+          </div>
+        </div>
+      );
     }
   }
 
