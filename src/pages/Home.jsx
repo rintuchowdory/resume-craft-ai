@@ -162,7 +162,7 @@ const STEPS = [
   },
   {
     step: "04",
-    title: "Export & Apply",
+    title: "Export & bewerben",
     desc: "Herunterladen und sofort bewerben",
     icon: Rocket,
   },
@@ -171,7 +171,7 @@ const STEPS = [
 const TESTIMONIALS = [
   {
     name: "Sarah Chen",
-    role: "Software Engineer",
+    role: "Softwareentwicklerin",
     company: "Google",
     testimonial:
       "ResumeAI hat mir den Job bei Google gebracht! Die KI-Vorschläge passten genau, und die ATS-Optimierung wirkt.",
@@ -180,7 +180,7 @@ const TESTIMONIALS = [
   },
   {
     name: "Michael Rodriguez",
-    role: "Product Manager",
+    role: "Produktmanager",
     company: "Meta",
     testimonial:
       "In 3 Wochen von der Arbeitslosigkeit zum Produktmanager bei Meta. Vorlagen und Job-Abgleich sind entscheidend!",
@@ -255,7 +255,7 @@ export default function Home() {
             >
               <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1.5 text-xs font-medium text-emerald-300">
                 <Sparkles className="h-3.5 w-3.5" />
-                #1 AI-Powered Resume Builder
+                #1 KI-Lebenslauf-Editor
               </div>
 
               <h1 className="text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
@@ -266,8 +266,7 @@ export default function Home() {
               </h1>
 
               <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg lg:mx-0">
-                Erstelle ATS-optimierte Lebensläufe mit KI-Inhalten, echtem Job-Abgleich und professionellen Vorlagen. Join
-                50,000+ successful job seekers.
+                Erstelle ATS-optimierte Lebensläufe mit KI-Inhalten, echtem Job-Abgleich und professionellen Vorlagen. Schließe dich über 50.000 Bewerbern an.
               </p>
 
               <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-white/60 lg:justify-start">
@@ -309,7 +308,7 @@ export default function Home() {
               <div className="mt-8 flex items-center justify-center gap-3 text-xs text-white/45 lg:justify-start">
                 <span className="inline-flex items-center gap-1.5">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400/70" />
-                  No credit card
+                  Keine Kreditkarte
                 </span>
                 <span className="h-3 w-px bg-white/15" />
                 <span className="inline-flex items-center gap-1.5">
@@ -351,7 +350,7 @@ export default function Home() {
               >
                 <div className="flex items-center gap-2 text-sky-300">
                   <TrendingUp className="h-4 w-4" />
-                  <span className="text-xs font-semibold">Job Match: 94%</span>
+                  <span className="text-xs font-semibold">Job-Passung: 94%</span>
                 </div>
               </motion.div>
             </motion.div>
@@ -465,7 +464,7 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="mb-12 text-center">
             <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-400">
-              Nachweis
+              Stimmen
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Beliebt bei Jobsuchenden weltweit
