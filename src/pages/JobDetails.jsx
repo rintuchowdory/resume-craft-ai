@@ -14,7 +14,7 @@ import ResumeLoader from "@/components/common/ResumeLoader";
 export default function JobDetails() {
   const [job, setJob] = useState(null);
   const [resumes, setResumes] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isWird geladen, setIsWird geladen] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function JobDetails() {
   }, [location.search]);
 
   const loadJobDetails = async (jobId) => {
-    setIsLoading(true);
+    setIsWird geladen(true);
     try {
       const [jobData, resumeData] = await Promise.all([
         Job.get(jobId),
@@ -37,13 +37,13 @@ export default function JobDetails() {
     } catch (error) {
       console.error("Error loading job details:", error);
     }
-    setIsLoading(false);
+    setIsWird geladen(false);
   };
   
   const applyToJob = async (job) => {
     try {
       if (resumes.length === 0) {
-        alert("Please create a resume first before applying to jobs!");
+        alert("Bitte erstelle zuerst einen Lebenslauf, bevor du dich bewirbst.");
         return;
       }
       const latestResume = resumes[0];
@@ -58,11 +58,11 @@ export default function JobDetails() {
       alert(`Successfully applied to ${job.title} at ${job.company}!`);
     } catch (error) {
       console.error("Error applying to job:", error);
-      alert("Error applying to job. Please try again.");
+      alert("Bewerbung fehlgeschlagen. Bitte erneut versuchen.");
     }
   };
 
-  if (isLoading) {
+  if (isWird geladen) {
     return <ResumeLoader />;
   }
 
@@ -77,7 +77,7 @@ export default function JobDetails() {
             <Button asChild>
               <Link to={createPageUrl("Jobs")}>
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back to Job Board
+                Zurück to Job Board
               </Link>
             </Button>
           </CardContent>
@@ -95,7 +95,7 @@ export default function JobDetails() {
         <Button asChild variant="ghost" className="mb-6">
           <Link to={createPageUrl("Jobs")}>
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Back to Job Board
+            Zurück to Job Board
           </Link>
         </Button>
         

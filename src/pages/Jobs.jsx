@@ -16,7 +16,7 @@ import ResumeLoader from "@/components/common/ResumeLoader";
 export default function Jobs() {
   const [jobs, setJobs] = useState([]);
   const [resumes, setResumes] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isWird geladen, setIsWird geladen] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [locationFilter, setLocationFilter] = useState("all");
   const [typeFilter, setTypeFilter] = useState("all");
@@ -28,7 +28,7 @@ export default function Jobs() {
   }, []);
 
   const loadData = async () => {
-    setIsLoading(true);
+    setIsWird geladen(true);
     try {
       const [jobData, resumeData] = await Promise.all([
         Job.list("-posted_date"),
@@ -39,13 +39,13 @@ export default function Jobs() {
     } catch (error) {
       console.error("Error loading data:", error);
     }
-    setIsLoading(false);
+    setIsWird geladen(false);
   };
 
   const applyToJob = async (job) => {
     try {
       if (resumes.length === 0) {
-        alert("Please create a resume first before applying to jobs!");
+        alert("Bitte erstelle zuerst einen Lebenslauf, bevor du dich bewirbst.");
         return;
       }
 
@@ -64,7 +64,7 @@ export default function Jobs() {
       alert(`Successfully applied to ${job.title} at ${job.company}!`);
     } catch (error) {
       console.error("Error applying to job:", error);
-      alert("Error applying to job. Please try again.");
+      alert("Bewerbung fehlgeschlagen. Bitte erneut versuchen.");
     }
   };
 
@@ -101,7 +101,7 @@ export default function Jobs() {
     return colors[type] || "bg-gray-100 text-gray-800";
   };
 
-  if (isLoading) {
+  if (isWird geladen) {
     return <ResumeLoader />;
   }
 
@@ -114,7 +114,7 @@ export default function Jobs() {
       >
         <div className="flex items-center gap-3 mb-4">
           <Briefcase className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900">Job Opportunities</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Stellenangebote</h1>
           <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white">
             <TrendingUp className="w-4 h-4 mr-1" />
             Trending
@@ -132,7 +132,7 @@ export default function Jobs() {
             <div className="relative">
               <Search className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
               <Input
-                placeholder="Search jobs, companies, skills..."
+                placeholder="Stellen, Firmen, Kenntnisse suchen …"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10"
@@ -145,7 +145,7 @@ export default function Jobs() {
               <SelectValue placeholder="Ort" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Locations</SelectItem>
+              <SelectItem value="all">Alle Orte</SelectItem>
               <SelectItem value="san francisco">San Francisco</SelectItem>
               <SelectItem value="new york">New York</SelectItem>
               <SelectItem value="remote">Remote</SelectItem>
@@ -158,9 +158,9 @@ export default function Jobs() {
               <SelectValue placeholder="Job Type" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Types</SelectItem>
-              <SelectItem value="full-time">Full-time</SelectItem>
-              <SelectItem value="part-time">Part-time</SelectItem>
+              <SelectItem value="all">Alle Arten</SelectItem>
+              <SelectItem value="full-time">Vollzeit</SelectItem>
+              <SelectItem value="part-time">Teilzeit</SelectItem>
               <SelectItem value="contract">Contract</SelectItem>
               <SelectItem value="remote">Remote</SelectItem>
             </SelectContent>
@@ -171,9 +171,9 @@ export default function Jobs() {
               <SelectValue placeholder="Berufserfahrung" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Levels</SelectItem>
-              <SelectItem value="entry">Entry Level</SelectItem>
-              <SelectItem value="mid">Mid Level</SelectItem>
+              <SelectItem value="all">Alle Erfahrungsstufen</SelectItem>
+              <SelectItem value="entry">Berufseinstieg</SelectItem>
+              <SelectItem value="mid">Mit Erfahrung</SelectItem>
               <SelectItem value="senior">Senior</SelectItem>
               <SelectItem value="executive">Führungskraft</SelectItem>
             </SelectContent>
@@ -200,8 +200,8 @@ export default function Jobs() {
           <Card className="text-center py-16">
             <CardContent>
               <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-600 mb-2">No jobs found</h3>
-              <p className="text-gray-500">Try adjusting your search criteria or filters</p>
+              <h3 className="text-xl font-semibold text-gray-600 mb-2">Keine Stellen gefunden</h3>
+              <p className="text-gray-500">Passe Suche oder Filter an</p>
             </CardContent>
           </Card>
         ) : (
@@ -276,7 +276,7 @@ export default function Jobs() {
 
                         {job.skills && job.skills.length > 0 && (
                           <div className="mb-4">
-                            <p className="text-sm font-medium text-gray-700 mb-2">Required Skills:</p>
+                            <p className="text-sm font-medium text-gray-700 mb-2">Geforderte Kenntnisse:</p>
                             <div className="flex flex-wrap gap-1">
                               {job.skills.slice(0, 6).map((skill, skillIndex) => (
                                 <Badge key={skillIndex} variant="secondary" className="text-xs">

@@ -42,8 +42,8 @@ export default function EventDetails() {
   const workshops = [
     { title: "Web Development Bootcamp", duration: "2 hours", level: "Beginner to Advanced" },
     { title: "AI & Machine Learning Workshop", duration: "2 hours", level: "Intermediate" },
-    { title: "Design Thinking Session", duration: "1.5 hours", level: "All Levels" },
-    { title: "Resume Building & Interview Prep", duration: "1 hour", level: "All Levels" }
+    { title: "Design Thinking Session", duration: "1.5 hours", level: "Alle Erfahrungsstufen" },
+    { title: "Resume Building & Interview Prep", duration: "1 hour", level: "Alle Erfahrungsstufen" }
   ];
 
   const faqs = [
@@ -88,7 +88,7 @@ export default function EventDetails() {
                   size="lg"
                   className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-bold"
                 >
-                  Back to Event Page
+                  Zurück to Event Page
                 </Button>
               </Link>
             </div>

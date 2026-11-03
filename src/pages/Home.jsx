@@ -117,14 +117,14 @@ function FloatingResume2D() {
 const BENEFITS = [
   {
     icon: Sparkles,
-    title: "AI-Generated Content",
-    desc: "Smart bullet points & summaries tailored to your industry",
+    title: "KI-generierte Inhalte",
+    desc: "Passende Stichpunkte und Kurzprofile für deine Branche",
     tint: "from-purple-500/20 to-fuchsia-500/10 text-purple-300 border-purple-400/25",
   },
   {
     icon: Target,
     title: "ATS-optimiert",
-    desc: "Beat 99% of applicant tracking systems with our optimization",
+    desc: "Bestehe 99 % der Bewerbermanagementsysteme mit unserer Optimierung",
     tint: "from-emerald-500/20 to-teal-500/10 text-emerald-300 border-emerald-400/25",
   },
   {
@@ -135,7 +135,7 @@ const BENEFITS = [
   },
   {
     icon: TrendingUp,
-    title: "Real-time Analytics",
+    title: "Echtzeit-Statistik",
     desc: "Track performance and get improvement suggestions",
     tint: "from-amber-500/20 to-orange-500/10 text-amber-300 border-amber-400/25",
   },
@@ -144,26 +144,26 @@ const BENEFITS = [
 const STEPS = [
   {
     step: "01",
-    title: "Choose Template",
-    desc: "Select from our ATS-optimized professional templates",
+    title: "Vorlage wählen",
+    desc: "Wähle aus ATS-optimierten Profi-Vorlagen",
     icon: LayoutTemplate,
   },
   {
     step: "02",
-    title: "AI Assistance",
-    desc: "Our AI generates compelling content based on your input",
+    title: "KI-Unterstützung",
+    desc: "Unsere KI erstellt passende Inhalte aus deinen Angaben",
     icon: Wand2,
   },
   {
     step: "03",
     title: "Live-Vorschau",
-    desc: "See your resume update in real-time as you edit",
+    desc: "Sieh deinen Lebenslauf beim Bearbeiten live",
     icon: Eye,
   },
   {
     step: "04",
     title: "Export & Apply",
-    desc: "Download and start applying to jobs immediately",
+    desc: "Herunterladen und sofort bewerben",
     icon: Rocket,
   },
 ];
@@ -238,7 +238,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={() => setShowEventBanner(false)}
-                aria-label="Dismiss event announcement"
+                aria-label="Hinweis schließen"
                 className="grid h-8 w-8 place-items-center rounded-lg text-white/50 transition hover:bg-white/10 hover:text-white"
               >
                 <X className="h-4 w-4" />
@@ -360,10 +360,10 @@ export default function Home() {
 
           <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              { value: "50K+", label: "Resumes created" },
-              { value: "94%", label: "Interview success" },
-              { value: "40+", label: "ATS templates" },
-              { value: "2 min", label: "Setup time" },
+              { value: "50K+", label: "Erstellte Lebensläufe" },
+              { value: "94%", label: "Einladungen zum Gespräch" },
+              { value: "40+", label: "ATS-Vorlagen" },
+              { value: "2 min", label: "Einrichtungszeit" },
             ].map((stat, index) => (
               <Reveal key={stat.label} delay={index * 0.05}>
                 <div className="glass rounded-xl px-4 py-3 text-center">

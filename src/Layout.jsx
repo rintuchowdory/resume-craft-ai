@@ -273,7 +273,7 @@ export default function Layout({ children, currentPageName }) {
                   </div>
                   <div>
                     <h3 className="font-bold text-xl">ResumeAI</h3>
-                    <p className="text-gray-400 text-sm">AI Resume Builder</p>
+                    <p className="text-gray-400 text-sm">KI-Lebenslauf-Editor</p>
                   </div>
                 </div>
                 <p className="text-gray-400 text-sm mb-4">
@@ -342,7 +342,7 @@ export default function Layout({ children, currentPageName }) {
               </div>
               <div>
                 <h2 className="text-lg font-bold text-white">ResumeAI</h2>
-                <p className="text-sm text-white/45">AI Resume Builder</p>
+                <p className="text-sm text-white/45">KI-Lebenslauf-Editor</p>
               </div>
             </Link>
           </SidebarHeader>

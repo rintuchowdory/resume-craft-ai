@@ -115,26 +115,26 @@ export default function TemplatePreview() {
             <Link to={createPageUrl("Vorlagen")}>
               <Button variant="outline" size="sm">
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Back
+                Zurück
               </Button>
             </Link>
             <div>
               <h1 className="text-2xl font-bold text-gray-900">{template.name}</h1>
-              <p className="text-gray-600">Live preview with sample content</p>
+              <p className="text-gray-600">Live-Vorschau mit Beispielinhalten</p>
             </div>
           </div>
           
           <div className="flex gap-3 w-full sm:w-auto">
             <Button variant="outline" className="flex-1 sm:flex-none">
               <Download className="w-4 h-4 mr-2" />
-              Download Sample
+              Beispiel herunterladen
             </Button>
             <Button 
               onClick={createResumeWithTemplate}
               className="flex-1 sm:flex-none bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700"
             >
               <Plus className="w-4 h-4 mr-2" />
-              Use Template
+              Vorlage nutzen
             </Button>
           </div>
         </div>
@@ -270,7 +270,7 @@ export default function TemplatePreview() {
               size="lg"
             >
               <Plus className="w-5 h-5 mr-2" />
-              Start Building Your Resume
+              Lebenslauf jetzt erstellen
             </Button>
           </motion.div>
         </div>

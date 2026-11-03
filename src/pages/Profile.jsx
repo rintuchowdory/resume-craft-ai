@@ -13,7 +13,7 @@ import ResumeLoader from "@/components/common/ResumeLoader";
 
 export default function Profile() {
   const [user, setUser] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isWird geladen, setIsWird geladen] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
   const [formData, setFormData] = useState({
@@ -34,7 +34,7 @@ export default function Profile() {
   }, []);
 
   const loadUserProfile = async () => {
-    setIsLoading(true);
+    setIsWird geladen(true);
     try {
       const userData = await User.me();
       setUser(userData);
@@ -53,7 +53,7 @@ export default function Profile() {
     } catch (error) {
       console.error("Error loading profile:", error);
     }
-    setIsLoading(false);
+    setIsWird geladen(false);
   };
 
   const handleInputChange = (field, value) => {
@@ -91,7 +91,7 @@ export default function Profile() {
     setIsSaving(false);
   };
 
-  if (isLoading) {
+  if (isWird geladen) {
     return <ResumeLoader />;
   }
 

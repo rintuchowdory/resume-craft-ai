@@ -13,14 +13,14 @@ const COLORS = ['#10B981', '#3B82F6', '#F59E0B', '#EF4444', '#8B5CF6'];
 export default function Analytics() {
   const [resumes, setResumes] = useState([]);
   const [applications, setApplications] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isWird geladen, setIsWird geladen] = useState(true);
 
   useEffect(() => {
     loadData();
   }, []);
 
   const loadData = async () => {
-    setIsLoading(true);
+    setIsWird geladen(true);
     try {
       const [resumeData, applicationData] = await Promise.all([
         Resume.list("-updated_date"),
@@ -31,7 +31,7 @@ export default function Analytics() {
     } catch (error) {
       console.error("Error loading data:", error);
     }
-    setIsLoading(false);
+    setIsWird geladen(false);
   };
 
   const getApplicationStatusData = () => {
@@ -81,7 +81,7 @@ export default function Analytics() {
   const successRate = applications.length > 0 ? 
     Math.round((applications.filter(app => ['interview', 'offer'].includes(app.status)).length / applications.length) * 100) : 0;
 
-  if (isLoading) {
+  if (isWird geladen) {
     return <ResumeLoader />;
   }
 

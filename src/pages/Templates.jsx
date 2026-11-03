@@ -65,7 +65,7 @@ const templates = [
     description: "Mutiges Design für Gründer und Innovatoren",
     accent: "#EF4444",
     bgColor: "#FEF2F2",
-    features: ["Bold", "Unternehmerisch", "Modern"],
+    features: ["Kräftig", "Unternehmerisch", "Modern"],
     category: "startup",
     popular: false,
   },
@@ -75,17 +75,17 @@ const templates = [
     description: "Klares medizinisches Design mit Vertrauen schaffenden Elementen",
     accent: "#06B6D4",
     bgColor: "#ECFEFF",
-    features: ["Medical", "Trust-building", "Professionell"],
+    features: ["Medizinisch", "Vertrauensbildend", "Professionell"],
     category: "healthcare",
     popular: false,
   },
   {
     id: "academic",
     name: "Wissenschaft",
-    description: "Scholarly design perfect for researchers and academics",
+    description: "Wissenschaftliches Design für Forschung und Lehre",
     accent: "#7C3AED",
     bgColor: "#FAF5FF",
-    features: ["Academic", "Forschungsfokus", "Publikationen"],
+    features: ["Wissenschaftlich", "Forschungsfokus", "Publikationen"],
     category: "academic",
     popular: false,
   }
@@ -179,7 +179,7 @@ export default function Templates() {
                 {template.popular && (
                   <div className="absolute top-3 right-3 z-10">
                     <Badge className="bg-gradient-to-r from-purple-500 to-pink-500 text-white text-xs">
-                      Popular
+                      Beliebt
                     </Badge>
                   </div>
                 )}
@@ -251,7 +251,7 @@ export default function Templates() {
                       className="flex-1 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-xs sm:text-sm"
                     >
                       <Plus className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                      Use Template
+                      Vorlage nutzen
                     </Button>
                   </div>
                 </CardContent>

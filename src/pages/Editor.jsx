@@ -20,7 +20,7 @@ import ResumeLoader from "@/components/common/ResumeLoader";
 
 export default function Editor() {
   const [resume, setResume] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isWird geladen, setIsWird geladen] = useState(true);
   const [isSaving, setIsSaving] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [activeSection, setActiveSection] = useState("personal");
@@ -29,7 +29,7 @@ export default function Editor() {
   const resumeId = urlParams.get('id');
 
   const loadResume = useCallback(async () => {
-    setIsLoading(true);
+    setIsWird geladen(true);
     try {
       // Direct fetch by ID is more efficient if the SDK supports it.
       // Assuming it doesn't, filtering from a list is the alternative.
@@ -43,7 +43,7 @@ export default function Editor() {
     } catch (error) {
       console.error("Error loading resume:", error);
     }
-    setIsLoading(false);
+    setIsWird geladen(false);
   }, [resumeId]); // `resumeId` is a dependency here.
 
   useEffect(() => {
@@ -51,7 +51,7 @@ export default function Editor() {
       loadResume();
     } else {
       // No resume id in the URL — nothing to load, stop the spinner.
-      setIsLoading(false);
+      setIsWird geladen(false);
     }
   }, [resumeId, loadResume]); // `loadResume` is now a dependency here.
 
@@ -149,7 +149,7 @@ Provide only a numeric score between 0-100.`,
     }
   };
 
-  if (isLoading) {
+  if (isWird geladen) {
     return <ResumeLoader />;
   }
 
