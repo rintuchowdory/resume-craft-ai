@@ -14,7 +14,7 @@ import ResumeLoader from "@/components/common/ResumeLoader";
 export default function JobDetails() {
   const [job, setJob] = useState(null);
   const [resumes, setResumes] = useState([]);
-  const [isWird geladen, setIsWird geladen] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const location = useLocation();
 
   useEffect(() => {
@@ -26,7 +26,7 @@ export default function JobDetails() {
   }, [location.search]);
 
   const loadJobDetails = async (jobId) => {
-    setIsWird geladen(true);
+    setIsLoading(true);
     try {
       const [jobData, resumeData] = await Promise.all([
         Job.get(jobId),
@@ -37,7 +37,7 @@ export default function JobDetails() {
     } catch (error) {
       console.error("Error loading job details:", error);
     }
-    setIsWird geladen(false);
+    setIsLoading(false);
   };
   
   const applyToJob = async (job) => {
@@ -62,7 +62,7 @@ export default function JobDetails() {
     }
   };
 
-  if (isWird geladen) {
+  if (isLoading) {
     return <ResumeLoader />;
   }
 

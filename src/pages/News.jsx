@@ -11,12 +11,12 @@ import ResumeLoader from "@/components/common/ResumeLoader";
 
 export default function News() {
   const [news, setNews] = useState([]);
-  const [isWird geladen, setIsWird geladen] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
 
   const loadNews = useCallback(async () => {
-    setIsWird geladen(true);
+    setIsLoading(true);
     try {
       const response = await InvokeLLM({
         prompt: `Fetch the top 12 trending news articles about the job market, career advice, and skills development. Use your access to the internet to find real, current articles from today. For each article, provide a title, a 2-3 sentence summary, the source name, the original article URL, the publication date, and assign a relevant category. The categories are: 'Hiring Trends', 'Salary Insights', 'Remote Work', 'AI Impact', 'Skill Development', 'Industry News'.`,
@@ -50,7 +50,7 @@ export default function News() {
       console.error("Error loading news:", error);
       // You can add a fallback to sample data here if you want
     }
-    setIsWird geladen(false);
+    setIsLoading(false);
   }, []);
 
   useEffect(() => {
@@ -85,7 +85,7 @@ export default function News() {
     return matchesSearch && matchesCategory;
   });
 
-  if (isWird geladen) {
+  if (isLoading) {
     return <ResumeLoader />;
   }
 

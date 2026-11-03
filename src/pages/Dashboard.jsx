@@ -98,21 +98,21 @@ function StatCard({ label, value, hint, icon: Icon, tint, delay = 0 }) {
 
 export default function Dashboard() {
   const [resumes, setResumes] = useState([]);
-  const [isWird geladen, setIsWird geladen] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     loadResumes();
   }, []);
 
   const loadResumes = async () => {
-    setIsWird geladen(true);
+    setIsLoading(true);
     try {
       const data = await Resume.list("-updated_date");
       setResumes(data || []);
     } catch (error) {
       console.error("Error loading resumes:", error);
     }
-    setIsWird geladen(false);
+    setIsLoading(false);
   };
 
   const createNewResume = async () => {
@@ -399,7 +399,7 @@ export default function Dashboard() {
             </span>
           </div>
 
-          {isWird geladen ? (
+          {isLoading ? (
             <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
               {[...Array(6)].map((_, i) => (
                 <div key={i} className="glass animate-pulse rounded-2xl p-5">

@@ -16,7 +16,7 @@ import ResumeLoader from "@/components/common/ResumeLoader";
 export default function Jobs() {
   const [jobs, setJobs] = useState([]);
   const [resumes, setResumes] = useState([]);
-  const [isWird geladen, setIsWird geladen] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [locationFilter, setLocationFilter] = useState("all");
   const [typeFilter, setTypeFilter] = useState("all");
@@ -28,7 +28,7 @@ export default function Jobs() {
   }, []);
 
   const loadData = async () => {
-    setIsWird geladen(true);
+    setIsLoading(true);
     try {
       const [jobData, resumeData] = await Promise.all([
         Job.list("-posted_date"),
@@ -39,7 +39,7 @@ export default function Jobs() {
     } catch (error) {
       console.error("Error loading data:", error);
     }
-    setIsWird geladen(false);
+    setIsLoading(false);
   };
 
   const applyToJob = async (job) => {
@@ -101,7 +101,7 @@ export default function Jobs() {
     return colors[type] || "bg-gray-100 text-gray-800";
   };
 
-  if (isWird geladen) {
+  if (isLoading) {
     return <ResumeLoader />;
   }
 
