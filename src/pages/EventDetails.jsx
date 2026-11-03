@@ -80,7 +80,7 @@ export default function EventDetails() {
                 size="lg" 
                 className="bg-white text-purple-600 hover:bg-gray-100 px-8 py-6 text-lg font-bold"
               >
-                Register Now - FREE
+                Jetzt kostenlos registrieren
               </Button>
               <Link to={createPageUrl("StudentEventLanding")}>
                 <Button 
@@ -88,7 +88,7 @@ export default function EventDetails() {
                   size="lg"
                   className="border-2 border-white text-white hover:bg-white/10 px-8 py-6 text-lg font-bold"
                 >
-                  Zurück to Event Page
+                  Zurück zur Veranstaltung
                 </Button>
               </Link>
             </div>
@@ -108,7 +108,7 @@ export default function EventDetails() {
                 <div className="flex items-start gap-4">
                   <Calendar className="w-8 h-8 text-purple-600 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-lg">Date & Time</h3>
+                    <h3 className="font-bold text-lg">Datum & Uhrzeit</h3>
                     <p className="text-gray-600">15th March 2024</p>
                     <p className="text-gray-600">9:00 AM - 6:00 PM</p>
                   </div>
@@ -116,7 +116,7 @@ export default function EventDetails() {
                 <div className="flex items-start gap-4">
                   <MapPin className="w-8 h-8 text-blue-600 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-lg">Venue</h3>
+                    <h3 className="font-bold text-lg">Ort</h3>
                     <p className="text-gray-600">Convention Center</p>
                     <p className="text-gray-600">Jhansi, Uttar Pradesh</p>
                   </div>
@@ -124,7 +124,7 @@ export default function EventDetails() {
                 <div className="flex items-start gap-4">
                   <Users className="w-8 h-8 text-green-600 flex-shrink-0" />
                   <div>
-                    <h3 className="font-bold text-lg">Capacity</h3>
+                    <h3 className="font-bold text-lg">Plätze</h3>
                     <p className="text-gray-600">500+ Students</p>
                     <p className="text-red-600 font-semibold">Only 50 Spots Left!</p>
                   </div>
@@ -240,7 +240,7 @@ export default function EventDetails() {
 
         {/* FAQs */}
         <section className="mb-16">
-          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Frequently Asked Questions</h2>
+          <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">Häufige Fragen</h2>
           <div className="space-y-4 max-w-3xl mx-auto">
             {faqs.map((faq, index) => (
               <motion.div

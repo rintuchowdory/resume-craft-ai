@@ -72,12 +72,12 @@ export default function JobDetails() {
         <Card className="text-center py-16">
           <CardContent>
             <Briefcase className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-            <h3 className="text-xl font-semibold text-gray-600 mb-2">Job not found</h3>
-            <p className="text-gray-500 mb-4">The job you are looking for does not exist or has been removed.</p>
+            <h3 className="text-xl font-semibold text-gray-600 mb-2">Stelle nicht gefunden</h3>
+            <p className="text-gray-500 mb-4">Diese Stelle gibt es nicht mehr.</p>
             <Button asChild>
               <Link to={createPageUrl("Jobs")}>
                 <ArrowLeft className="w-4 h-4 mr-2" />
-                Zurück to Job Board
+                Zurück zu den Stellen
               </Link>
             </Button>
           </CardContent>
@@ -95,7 +95,7 @@ export default function JobDetails() {
         <Button asChild variant="ghost" className="mb-6">
           <Link to={createPageUrl("Jobs")}>
             <ArrowLeft className="w-4 h-4 mr-2" />
-            Zurück to Job Board
+            Zurück zu den Stellen
           </Link>
         </Button>
         
@@ -119,35 +119,35 @@ export default function JobDetails() {
               </div>
             </div>
             <div className="flex items-center gap-2 flex-shrink-0">
-              <Button variant="outline"><Bookmark className="w-4 h-4 mr-2" /> Save</Button>
-              <Button onClick={() => applyToJob(job)} className="bg-gradient-to-r from-green-500 to-emerald-600"><Send className="w-4 h-4 mr-2" /> Quick Apply</Button>
+              <Button variant="outline"><Bookmark className="w-4 h-4 mr-2" /> Speichern</Button>
+              <Button onClick={() => applyToJob(job)} className="bg-gradient-to-r from-green-500 to-emerald-600"><Send className="w-4 h-4 mr-2" /> Schnell bewerben</Button>
             </div>
           </CardHeader>
           <CardContent className="p-6">
             <div className="grid md:grid-cols-3 gap-6 mb-8">
               <div className="bg-green-50 p-4 rounded-lg text-center">
-                <p className="text-sm text-green-700 font-medium">Salary Range</p>
+                <p className="text-sm text-green-700 font-medium">Gehaltsspanne</p>
                 <p className="text-lg font-bold text-green-900">
                   {job.salary_min && job.salary_max ? `$${job.salary_min.toLocaleString()} - $${job.salary_max.toLocaleString()}` : 'Not Disclosed'}
                 </p>
               </div>
               <div className="bg-blue-50 p-4 rounded-lg text-center">
-                <p className="text-sm text-blue-700 font-medium">Experience Level</p>
+                <p className="text-sm text-blue-700 font-medium">Erfahrungsstufe</p>
                 <p className="text-lg font-bold text-blue-900 capitalize">{job.experience_level}</p>
               </div>
               <div className="bg-purple-50 p-4 rounded-lg text-center">
-                <p className="text-sm text-purple-700 font-medium">Job Type</p>
+                <p className="text-sm text-purple-700 font-medium">Anstellungsart</p>
                 <p className="text-lg font-bold text-purple-900 capitalize">{job.type.replace('-', ' ')}</p>
               </div>
             </div>
 
             <div className="prose prose-sm md:prose-base max-w-none text-gray-700">
-              <h3 className="font-bold text-gray-900">Job Description</h3>
+              <h3 className="font-bold text-gray-900">Stellenbeschreibung</h3>
               <p>{job.description}</p>
 
               {job.requirements?.length > 0 && (
                 <>
-                  <h3 className="font-bold text-gray-900 mt-6">Requirements</h3>
+                  <h3 className="font-bold text-gray-900 mt-6">Anforderungen</h3>
                   <ul className="list-disc pl-5">
                     {job.requirements.map((req, i) => <li key={i}>{req}</li>)}
                   </ul>
@@ -156,7 +156,7 @@ export default function JobDetails() {
 
               {job.benefits?.length > 0 && (
                 <>
-                  <h3 className="font-bold text-gray-900 mt-6">Benefits</h3>
+                  <h3 className="font-bold text-gray-900 mt-6">Vorteile</h3>
                   <ul className="list-disc pl-5">
                     {job.benefits.map((benefit, i) => <li key={i}>{benefit}</li>)}
                   </ul>
@@ -166,7 +166,7 @@ export default function JobDetails() {
 
             {job.skills?.length > 0 && (
               <div className="mt-8">
-                <h3 className="font-bold text-gray-900 mb-3">Required Skills</h3>
+                <h3 className="font-bold text-gray-900 mb-3">Geforderte Kenntnisse</h3>
                 <div className="flex flex-wrap gap-2">
                   {job.skills.map((skill, i) => <Badge key={i} variant="secondary">{skill}</Badge>)}
                 </div>

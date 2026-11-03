@@ -117,7 +117,7 @@ export default function Jobs() {
           <h1 className="text-3xl font-bold text-gray-900">Stellenangebote</h1>
           <Badge className="bg-gradient-to-r from-orange-500 to-red-500 text-white">
             <TrendingUp className="w-4 h-4 mr-1" />
-            Trending
+            Im Trend
           </Badge>
         </div>
         <p className="text-gray-600 text-lg">
@@ -161,7 +161,7 @@ export default function Jobs() {
               <SelectItem value="all">Alle Arten</SelectItem>
               <SelectItem value="full-time">Vollzeit</SelectItem>
               <SelectItem value="part-time">Teilzeit</SelectItem>
-              <SelectItem value="contract">Contract</SelectItem>
+              <SelectItem value="contract">Werkvertrag</SelectItem>
               <SelectItem value="remote">Remote</SelectItem>
             </SelectContent>
           </Select>
@@ -185,7 +185,7 @@ export default function Jobs() {
             className="flex items-center gap-2"
           >
             <TrendingUp className="w-4 h-4" />
-            Trending Only
+            Nur Trends
           </Button>
         </div>
         
@@ -230,7 +230,7 @@ export default function Jobs() {
                           {job.is_trending && (
                             <Badge className="bg-gradient-to-r from-orange-400 to-red-400 text-white">
                               <TrendingUp className="w-3 h-3 mr-1" />
-                              Trending
+                              Im Trend
                             </Badge>
                           )}
                         </div>
@@ -265,7 +265,7 @@ export default function Jobs() {
                           </Badge>
                           {job.remote_friendly && (
                             <Badge variant="outline" className="border-green-200 text-green-700">
-                              Remote Friendly
+                              Remote möglich
                             </Badge>
                           )}
                         </div>
@@ -302,18 +302,18 @@ export default function Jobs() {
                         className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700"
                       >
                         <Send className="w-4 h-4 mr-2" />
-                        Quick Apply
+                        Schnell bewerben
                       </Button>
                       
                       <Button variant="outline" size="sm">
                         <Bookmark className="w-4 h-4 mr-2" />
-                        Save
+                        Speichern
                       </Button>
                       
                       <Button asChild variant="outline" size="sm">
                         <Link to={createPageUrl(`JobDetails?id=${job.id}`)}>
                          <ExternalLink className="w-4 h-4 mr-2" />
-                         View Details
+                         Details ansehen
                         </Link>
                       </Button>
                     </div>
@@ -337,7 +337,7 @@ export default function Jobs() {
       {filteredJobs.length > 0 && (
         <div className="text-center mt-12">
           <Button variant="outline" size="lg">
-            Load More Jobs
+            Weitere Stellen laden
           </Button>
         </div>
       )}

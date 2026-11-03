@@ -30,7 +30,7 @@ export default function SkillsSection({ data, onChange }) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-gray-900">
           <Zap className="w-5 h-5" />
-          Skills
+          Kenntnisse
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
@@ -73,7 +73,7 @@ export default function SkillsSection({ data, onChange }) {
         )}
         
         <div className="text-sm text-gray-500 mt-4">
-          <p className="font-medium mb-2">Popular Skills:</p>
+          <p className="font-medium mb-2">Beliebte Kenntnisse:</p>
           <div className="flex flex-wrap gap-1">
             {["JavaScript", "React", "Python", "Node.js", "AWS", "SQL", "Git", "Figma"].map((skill) => (
               <button

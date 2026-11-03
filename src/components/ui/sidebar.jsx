@@ -237,7 +237,7 @@ const SidebarTrigger = React.forwardRef(({ className, onClick, asChild = false, 
       ) : (
         <>
           <PanelLeft />
-          <span className="sr-only">Toggle Sidebar</span>
+          <span className="sr-only">Seitenleiste umschalten</span>
         </>
       )}
     </Button>)

@@ -66,11 +66,11 @@ export default function ExperienceSection({ data, onChange }) {
         <div className="flex justify-between items-center">
           <CardTitle className="flex items-center gap-2 text-gray-900">
             <Briefcase className="w-5 h-5" />
-            Work Experience
+            Berufserfahrung
           </CardTitle>
           <Button onClick={addExperience} size="sm" variant="outline" className="border-green-200 hover:bg-green-50">
             <Plus className="w-4 h-4 mr-2" />
-            Add Experience
+            Station hinzufügen
           </Button>
         </div>
       </CardHeader>
@@ -97,7 +97,7 @@ export default function ExperienceSection({ data, onChange }) {
               
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <Label>Job Title</Label>
+                  <Label>Positionsbezeichnung</Label>
                   <Input
                     value={experience.title || ""}
                     onChange={(e) => updateExperience(expIndex, 'title', e.target.value)}
@@ -116,7 +116,7 @@ export default function ExperienceSection({ data, onChange }) {
               
               <div className="grid md:grid-cols-3 gap-4">
                 <div>
-                  <Label>Location</Label>
+                  <Label>Ort</Label>
                   <Input
                     value={experience.location || ""}
                     onChange={(e) => updateExperience(expIndex, 'location', e.target.value)}
@@ -124,7 +124,7 @@ export default function ExperienceSection({ data, onChange }) {
                   />
                 </div>
                 <div>
-                  <Label>Start Date</Label>
+                  <Label>Startdatum</Label>
                   <Input
                     type="month"
                     value={experience.start_date || ""}
@@ -132,7 +132,7 @@ export default function ExperienceSection({ data, onChange }) {
                   />
                 </div>
                 <div>
-                  <Label>End Date</Label>
+                  <Label>Enddatum</Label>
                   <Input
                     type="month"
                     value={experience.end_date || ""}
@@ -150,12 +150,12 @@ export default function ExperienceSection({ data, onChange }) {
                   onChange={(e) => updateExperience(expIndex, 'current', e.target.checked)}
                   className="rounded"
                 />
-                <Label htmlFor={`current-${expIndex}`}>I currently work here</Label>
+                <Label htmlFor={`current-${expIndex}`}>Ich arbeite hier aktuell</Label>
               </div>
               
               <div>
                 <div className="flex justify-between items-center mb-2">
-                  <Label>Key Achievements</Label>
+                  <Label>Wichtigste Erfolge</Label>
                   <Button 
                     onClick={() => addBullet(expIndex)} 
                     size="sm" 
@@ -163,7 +163,7 @@ export default function ExperienceSection({ data, onChange }) {
                     className="text-xs"
                   >
                     <Plus className="w-3 h-3 mr-1" />
-                    Add Bullet
+                    Stichpunkt hinzufügen
                   </Button>
                 </div>
                 <div className="space-y-2">

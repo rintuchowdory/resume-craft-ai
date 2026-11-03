@@ -40,7 +40,7 @@ export default function PersonalSection({ data, onChange }) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-gray-900">
           <User className="w-5 h-5" />
-          Personal Information
+          Persönliche Daten
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-6">
@@ -83,7 +83,7 @@ export default function PersonalSection({ data, onChange }) {
               {isUploading && (
                 <Button disabled size="sm" variant="outline">
                   <Upload className="w-4 h-4 mr-2 animate-spin" />
-                  Uploading...
+                  Wird hochgeladen …
                 </Button>
               )}
             </div>
@@ -117,7 +117,7 @@ export default function PersonalSection({ data, onChange }) {
         
         <div className="grid md:grid-cols-2 gap-4">
           <div>
-            <Label htmlFor="phone">Phone</Label>
+            <Label htmlFor="phone">Telefon</Label>
             <Input
               id="phone"
               value={data.phone || ""}
@@ -126,7 +126,7 @@ export default function PersonalSection({ data, onChange }) {
             />
           </div>
           <div>
-            <Label htmlFor="location">Location</Label>
+            <Label htmlFor="location">Ort</Label>
             <Input
               id="location"
               value={data.location || ""}
@@ -158,7 +158,7 @@ export default function PersonalSection({ data, onChange }) {
         </div>
         
         <div>
-          <Label htmlFor="summary">Professional Summary</Label>
+          <Label htmlFor="summary">Kurzprofil</Label>
           <Textarea
             id="summary"
             value={data.summary || ""}

@@ -196,7 +196,7 @@ Provide only a numeric score between 0-100.`,
               className="border-blue-200 hover:bg-blue-50"
             >
               <Target className="w-4 h-4 mr-2" />
-              Check ATS Score
+              ATS-Wert prüfen
             </Button>
 
             <Button
@@ -208,12 +208,12 @@ Provide only a numeric score between 0-100.`,
               {isExporting ? (
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-purple-500 mr-2"></div>
-                  Exporting...
+                  Export läuft …
                 </>
               ) : (
                 <>
                   <FileDown className="w-4 h-4 mr-2" />
-                  Export PDF
+                  PDF exportieren
                 </>
               )}
             </Button>
@@ -226,12 +226,12 @@ Provide only a numeric score between 0-100.`,
               {isSaving ? (
                 <>
                   <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                  Saving...
+                  Speichern …
                 </>
               ) : (
                 <>
                   <Save className="w-4 h-4 mr-2" />
-                  Save Resume
+                  Speichern
                 </>
               )}
             </Button>

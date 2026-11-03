@@ -64,12 +64,12 @@ ${formData.message}
           <div className="w-24 h-24 bg-green-100 rounded-full mx-auto mb-6 flex items-center justify-center">
             <CheckCircle className="w-12 h-12 text-green-600" />
           </div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Message Sent!</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">Nachricht gesendet!</h2>
           <p className="text-gray-600 mb-6">
-            Thank you for reaching out. We'll get back to you within 24 hours.
+            Danke für deine Nachricht. Wir antworten innerhalb von 24 Stunden.
           </p>
           <Button onClick={() => setIsSubmitted(false)} variant="outline">
-            Send Another Message
+            Weitere Nachricht senden
           </Button>
         </motion.div>
       </div>
@@ -88,7 +88,7 @@ ${formData.message}
           >
             <div className="flex items-center justify-center gap-2 mb-4">
               <MessageSquare className="w-8 h-8 text-blue-600" />
-              <h1 className="text-5xl font-bold text-gray-900">Get in Touch</h1>
+              <h1 className="text-5xl font-bold text-gray-900">Kontakt aufnehmen</h1>
             </div>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               Have questions, feedback, or need support? We're here to help! 
@@ -111,7 +111,7 @@ ${formData.message}
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-blue-800">
                   <Mail className="w-5 h-5" />
-                  Contact Information
+                  Kontaktdaten
                 </CardTitle>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -120,7 +120,7 @@ ${formData.message}
                     <Mail className="w-5 h-5 text-blue-600" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">Email</h4>
+                    <h4 className="font-medium text-gray-900">E-Mail</h4>
                     <p className="text-gray-600">support@resumeai.com</p>
                     <p className="text-sm text-gray-500">We reply within 24 hours</p>
                   </div>
@@ -142,7 +142,7 @@ ${formData.message}
                     <MapPin className="w-5 h-5 text-purple-600" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">Office</h4>
+                    <h4 className="font-medium text-gray-900">Büro</h4>
                     <p className="text-gray-600">Jhansi, Uttar Pradesh, India</p>
                     <p className="text-sm text-gray-500">Founded & operated from Jhansi</p>
                   </div>
@@ -153,7 +153,7 @@ ${formData.message}
                     <Clock className="w-5 h-5 text-orange-600" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">Support Hours</h4>
+                    <h4 className="font-medium text-gray-900">Support-Zeiten</h4>
                     <p className="text-gray-600">Monday - Saturday</p>
                     <p className="text-sm text-gray-500">10:00 AM - 7:00 PM IST</p>
                   </div>
@@ -164,7 +164,7 @@ ${formData.message}
             {/* WhatsApp Support */}
             <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-green-800 mb-2">Quick Support</h3>
+                <h3 className="font-semibold text-green-800 mb-2">Schneller Support</h3>
                 <p className="text-green-700 text-sm mb-4">
                   Need instant help? Connect with us on WhatsApp for real-time assistance.
                 </p>
@@ -180,7 +180,7 @@ ${formData.message}
             {/* Social Links */}
             <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200">
               <CardContent className="p-6">
-                <h3 className="font-semibold text-blue-800 mb-4">Follow Us</h3>
+                <h3 className="font-semibold text-blue-800 mb-4">Folge uns</h3>
                 <div className="grid grid-cols-2 gap-3">
                   <Button variant="outline" size="sm" className="border-blue-200 hover:bg-blue-100">
                     🐦 Twitter
@@ -208,8 +208,8 @@ ${formData.message}
           >
             <Card className="bg-white/80 backdrop-blur-sm border border-gray-200">
               <CardHeader>
-                <CardTitle className="text-2xl font-bold text-gray-900">Send us a Message</CardTitle>
-                <p className="text-gray-600">Fill out the form below and we'll get back to you shortly.</p>
+                <CardTitle className="text-2xl font-bold text-gray-900">Schreib uns</CardTitle>
+                <p className="text-gray-600">Füll das Formular aus, wir melden uns zeitnah.</p>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -225,7 +225,7 @@ ${formData.message}
                       />
                     </div>
                     <div>
-                      <Label htmlFor="email">Email Address *</Label>
+                      <Label htmlFor="email">E-Mail-Adresse *</Label>
                       <Input
                         id="email"
                         type="email"
@@ -239,23 +239,23 @@ ${formData.message}
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="category">Category</Label>
+                      <Label htmlFor="category">Kategorie</Label>
                       <Select value={formData.category} onValueChange={(value) => handleInputChange('category', value)}>
                         <SelectTrigger>
                           <SelectValue placeholder="Select a category" />
                         </SelectTrigger>
                         <SelectContent>
-                          <SelectItem value="support">Technical Support</SelectItem>
+                          <SelectItem value="support">Technischer Support</SelectItem>
                           <SelectItem value="billing">Billing Question</SelectItem>
-                          <SelectItem value="feature">Feature Request</SelectItem>
-                          <SelectItem value="bug">Bug Report</SelectItem>
-                          <SelectItem value="partnership">Partnership</SelectItem>
-                          <SelectItem value="other">Other</SelectItem>
+                          <SelectItem value="feature">Funktionswunsch</SelectItem>
+                          <SelectItem value="bug">Fehlermeldung</SelectItem>
+                          <SelectItem value="partnership">Kooperation</SelectItem>
+                          <SelectItem value="other">Sonstiges</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
                     <div>
-                      <Label htmlFor="subject">Subject</Label>
+                      <Label htmlFor="subject">Betreff</Label>
                       <Input
                         id="subject"
                         value={formData.subject}
@@ -266,7 +266,7 @@ ${formData.message}
                   </div>
 
                   <div>
-                    <Label htmlFor="message">Message *</Label>
+                    <Label htmlFor="message">Nachricht *</Label>
                     <Textarea
                       id="message"
                       value={formData.message}
@@ -285,12 +285,12 @@ ${formData.message}
                     {isSubmitting ? (
                       <>
                         <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                        Sending Message...
+                        Wird gesendet …
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5 mr-2" />
-                        Send Message
+                        Nachricht senden
                       </>
                     )}
                   </Button>

@@ -164,13 +164,13 @@ export default function TemplatePreview() {
 
                   {/* Summary */}
                   <section className="mb-6">
-                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>PROFESSIONAL SUMMARY</h2>
+                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>KURZPROFIL</h2>
                     <p className="text-gray-700 leading-relaxed">{sampleData.personal_info.summary}</p>
                   </section>
 
                   {/* Experience */}
                   <section className="mb-6">
-                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>PROFESSIONAL EXPERIENCE</h2>
+                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>BERUFSERFAHRUNG</h2>
                     {sampleData.experience.map((exp, i) => (
                       <div key={i} className="mb-4">
                         <div className="flex justify-between items-baseline mb-1">
@@ -191,7 +191,7 @@ export default function TemplatePreview() {
 
                   {/* Education */}
                   <section className="mb-6">
-                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>EDUCATION</h2>
+                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>AUSBILDUNG</h2>
                     {sampleData.education.map((edu, i) => (
                       <div key={i} className="mb-2">
                         <div className="flex justify-between items-baseline">
@@ -206,13 +206,13 @@ export default function TemplatePreview() {
 
                   {/* Skills */}
                   <section className="mb-6">
-                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>TECHNICAL SKILLS</h2>
+                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>FACHKENNTNISSE</h2>
                     <p className="text-gray-700">{sampleData.skills.join(' • ')}</p>
                   </section>
 
                   {/* Projects */}
                   <section>
-                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>PROJECTS</h2>
+                    <h2 className="text-lg font-bold mb-3" style={{ color: template.accent }}>PROJEKTE</h2>
                     {sampleData.projects.map((project, i) => (
                       <div key={i} className="mb-3">
                         <h3 className="font-semibold text-gray-800">{project.name}</h3>
@@ -235,7 +235,7 @@ export default function TemplatePreview() {
           >
             <Card>
               <CardHeader>
-                <CardTitle>Template Features</CardTitle>
+                <CardTitle>Vorlagen-Merkmale</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
@@ -253,7 +253,7 @@ export default function TemplatePreview() {
 
             <Card>
               <CardHeader>
-                <CardTitle>Customization Options</CardTitle>
+                <CardTitle>Anpassungsoptionen</CardTitle>
               </CardHeader>
               <CardContent className="text-sm text-gray-600 space-y-2">
                 <p>• Change colors and fonts</p>

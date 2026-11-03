@@ -186,11 +186,11 @@ export default function Layout({ children, currentPageName }) {
               {/* Navigation Links */}
               <div className="hidden md:flex items-center space-x-8">
                 <Link to={createPageUrl("Templates")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Vorlagen</Link>
-                <Link to={createPageUrl("ATSChecker")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">ATS Checker</Link>
-                <Link to={createPageUrl("CoverLetter")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Cover Letter</Link>
+                <Link to={createPageUrl("ATSChecker")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">ATS-Prüfung</Link>
+                <Link to={createPageUrl("CoverLetter")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Anschreiben</Link>
                 <Link to={createPageUrl("Jobs")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Jobs</Link>
                 <Link to={createPageUrl("News")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">News</Link>
-                <Link to={createPageUrl("About")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">About</Link>
+                <Link to={createPageUrl("About")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Über uns</Link>
                 <Link to={createPageUrl("Contact")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Kontakt</Link>
               </div>
 
@@ -219,19 +219,19 @@ export default function Layout({ children, currentPageName }) {
                       <DropdownMenuItem asChild>
                         <Link to={createPageUrl("Dashboard")}>
                           <FileText className="mr-2 h-4 w-4" />
-                          Dashboard
+                          Übersicht
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
                         <Link to={createPageUrl("Profile")}>
                           <UserIcon className="mr-2 h-4 w-4" />
-                          Profile
+                          Profil
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem onClick={handleLogout}>
                         <LogOut className="mr-2 h-4 w-4" />
-                        Log out
+                        Abmelden
                       </DropdownMenuItem>
                     </DropdownMenuContent>
                   </DropdownMenu>
@@ -242,13 +242,13 @@ export default function Layout({ children, currentPageName }) {
                       onClick={handleLogin}
                       className="text-white/70 hover:bg-white/[0.06] hover:text-white"
                     >
-                      Log In
+                      Anmelden
                     </Button>
                     <Button
                       onClick={handleLogin}
                       className="rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 font-semibold text-[#04120c] hover:from-emerald-300 hover:to-teal-400"
                     >
-                      Get Started
+                      Loslegen
                     </Button>
                   </>
                 )}
@@ -351,7 +351,7 @@ export default function Layout({ children, currentPageName }) {
             {/* Guest Mode Notice */}
             {isGuestMode && (
               <div className="mb-6 rounded-xl border border-amber-400/25 bg-amber-400/[0.07] p-4">
-                <h3 className="mb-2 text-sm font-semibold text-amber-200">Guest mode</h3>
+                <h3 className="mb-2 text-sm font-semibold text-amber-200">Gastmodus</h3>
                 <p className="mb-3 text-xs text-amber-200/70">You're browsing as a guest. Sign up for full features!</p>
                 <Button size="sm" onClick={handleLogin} className="w-full rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 font-semibold text-[#04120c]">
                   Kostenlos registrieren
@@ -465,32 +465,32 @@ export default function Layout({ children, currentPageName }) {
                   </Button>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56" align="end" forceMount>
-                  <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                  <DropdownMenuLabel>Mein Konto</DropdownMenuLabel>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem asChild>
                     <Link to={createPageUrl("Profile")}>
                       <UserIcon className="mr-2 h-4 w-4" />
-                      Profile
+                      Profil
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem>
                     <SettingsIcon className="mr-2 h-4 w-4" />
-                    Settings
+                    Einstellungen
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
                   <DropdownMenuItem onClick={handleLogout}>
                     <LogOut className="mr-2 h-4 w-4" />
-                    Log out
+                    Abmelden
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
               <div className="space-y-2">
                 <Button onClick={handleLogin} className="w-full rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 font-semibold text-[#04120c]">
-                  Sign In
+                  Anmelden
                 </Button>
                 <p className="text-center text-xs text-white/40">
-                  Join thousands of users!
+                  Schließe dich Tausenden an!
                 </p>
               </div>
             )}

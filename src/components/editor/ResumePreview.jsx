@@ -14,7 +14,7 @@ export default function ResumePreview({ resume }) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-gray-900">
           <Eye className="w-5 h-5" />
-          Live Preview
+          Live-Vorschau
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -36,7 +36,7 @@ export default function ResumePreview({ resume }) {
 
           {experience.length > 0 && (
             <div className="mb-3">
-              <h3 className="text-sm font-bold text-gray-700 border-b mb-1 flex items-center gap-2"><Briefcase className="w-3 h-3"/> Experience</h3>
+              <h3 className="text-sm font-bold text-gray-700 border-b mb-1 flex items-center gap-2"><Briefcase className="w-3 h-3"/> Berufserfahrung</h3>
               {experience.map((exp, i) => (
                 <div key={i} className="mb-2">
                   <div className="flex justify-between items-baseline">
@@ -56,7 +56,7 @@ export default function ResumePreview({ resume }) {
 
           {education.length > 0 && (
              <div className="mb-3">
-              <h3 className="text-sm font-bold text-gray-700 border-b mb-1 flex items-center gap-2"><GraduationCap className="w-3 h-3"/> Education</h3>
+              <h3 className="text-sm font-bold text-gray-700 border-b mb-1 flex items-center gap-2"><GraduationCap className="w-3 h-3"/> Ausbildung</h3>
               {education.map((edu, i) => (
                 <div key={i} className="mb-1">
                    <div className="flex justify-between items-baseline">
@@ -71,14 +71,14 @@ export default function ResumePreview({ resume }) {
 
           {skills.length > 0 && (
             <div className="mb-3">
-              <h3 className="text-sm font-bold text-gray-700 border-b mb-1 flex items-center gap-2"><Zap className="w-3 h-3"/> Skills</h3>
+              <h3 className="text-sm font-bold text-gray-700 border-b mb-1 flex items-center gap-2"><Zap className="w-3 h-3"/> Kenntnisse</h3>
               <p className="text-xs text-gray-700">{skills.join(', ')}</p>
             </div>
           )}
           
           {projects.length > 0 && (
             <div>
-              <h3 className="text-sm font-bold text-gray-700 border-b mb-1 flex items-center gap-2"><Code className="w-3 h-3"/> Projects</h3>
+              <h3 className="text-sm font-bold text-gray-700 border-b mb-1 flex items-center gap-2"><Code className="w-3 h-3"/> Projekte</h3>
               {projects.map((proj, i) => (
                 <div key={i} className="mb-1">
                   <p className="text-xs font-semibold text-gray-800">{proj.name}</p>

@@ -191,10 +191,10 @@ export default function StudentEventLanding() {
               transition={{ delay: 0.4 }}
               className="text-5xl sm:text-6xl lg:text-8xl font-black text-white mb-6 leading-tight"
             >
-              Transform Your
+              Gestalte deine
               <br />
               <span className="bg-gradient-to-r from-green-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
-                Future Today
+                Zukunft heute
               </span>
             </motion.h1>
 

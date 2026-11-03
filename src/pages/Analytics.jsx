@@ -94,10 +94,10 @@ export default function Analytics() {
       >
         <div className="flex items-center gap-3 mb-4">
           <TrendingUp className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900">Career Analytics</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Karriere-Statistik</h1>
         </div>
         <p className="text-gray-600 text-lg">
-          Track your job search progress and optimize your resume performance.
+          Verfolge deine Bewerbungen und optimiere deine Lebensläufe.
         </p>
       </motion.div>
 
@@ -112,7 +112,7 @@ export default function Analytics() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-green-600 text-sm font-medium">Total Resumes</p>
+                  <p className="text-green-600 text-sm font-medium">Lebensläufe gesamt</p>
                   <p className="text-2xl font-bold text-gray-900">{resumes.length}</p>
                 </div>
                 <FileText className="w-8 h-8 text-green-600" />
@@ -148,7 +148,7 @@ export default function Analytics() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-purple-600 text-sm font-medium">Applications</p>
+                  <p className="text-purple-600 text-sm font-medium">Bewerbungen</p>
                   <p className="text-2xl font-bold text-gray-900">{applications.length}</p>
                 </div>
                 <Calendar className="w-8 h-8 text-purple-600" />
@@ -166,7 +166,7 @@ export default function Analytics() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-orange-600 text-sm font-medium">Success Rate</p>
+                  <p className="text-orange-600 text-sm font-medium">Erfolgsquote</p>
                   <p className="text-2xl font-bold text-gray-900">{successRate}%</p>
                 </div>
                 <Award className="w-8 h-8 text-orange-600" />
@@ -188,7 +188,7 @@ export default function Analytics() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Target className="w-5 h-5" />
-                Resume ATS Scores
+                ATS-Werte
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -215,7 +215,7 @@ export default function Analytics() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Eye className="w-5 h-5" />
-                Application Status
+                Bewerbungsstatus
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -253,7 +253,7 @@ export default function Analytics() {
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <TrendingUp className="w-5 h-5" />
-              Application Trend (Last 6 Months)
+              Bewerbungen (letzte 6 Monate)
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -279,7 +279,7 @@ export default function Analytics() {
       >
         <Card className="bg-white/80 backdrop-blur-sm">
           <CardHeader>
-            <CardTitle>Resume Performance Details</CardTitle>
+            <CardTitle>Details zur Lebenslauf-Leistung</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">

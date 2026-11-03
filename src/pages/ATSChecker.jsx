@@ -94,7 +94,7 @@ export default function ATSChecker() {
     <div className="container mx-auto px-4 py-12 max-w-5xl">
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
-          <FileSearch className="w-8 h-8 text-green-600" /> ATS Resume Checker
+          <FileSearch className="w-8 h-8 text-green-600" /> ATS-Prüfung
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Paste your resume and a job description. See which keywords you match, what's missing, and get practical tips — all processed locally in your browser.
@@ -105,7 +105,7 @@ export default function ATSChecker() {
         <div className="grid md:grid-cols-2 gap-6">
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Your resume text</CardTitle>
+              <CardTitle className="text-lg">Dein Lebenslauf-Text</CardTitle>
             </CardHeader>
             <CardContent>
               <Textarea
@@ -119,7 +119,7 @@ export default function ATSChecker() {
           </Card>
           <Card>
             <CardHeader>
-              <CardTitle className="text-lg">Job description</CardTitle>
+              <CardTitle className="text-lg">Stellenbeschreibung</CardTitle>
             </CardHeader>
             <CardContent>
               <Textarea
@@ -133,9 +133,9 @@ export default function ATSChecker() {
           </Card>
           <div className="md:col-span-2 flex justify-center gap-3">
             <Button onClick={run} disabled={resume.trim().length < 50 || job.trim().length < 30} className="bg-green-600 hover:bg-green-700 px-8 h-11">
-              <Sparkles className="w-4 h-4 mr-2" /> Analyze match
+              <Sparkles className="w-4 h-4 mr-2" /> Abgleich starten
             </Button>
-            <Button variant="outline" onClick={reset}>Clear</Button>
+            <Button variant="outline" onClick={reset}>Leeren</Button>
           </div>
         </div>
       ) : (
@@ -161,23 +161,23 @@ export default function ATSChecker() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <Card>
-              <CardHeader><CardTitle className="text-base flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-600" /> Matched keywords</CardTitle></CardHeader>
+              <CardHeader><CardTitle className="text-base flex items-center gap-2"><CheckCircle2 className="w-5 h-5 text-green-600" /> Passende Schlüsselwörter</CardTitle></CardHeader>
               <CardContent className="flex flex-wrap gap-2">
                 {result.matched.map((k) => <Badge key={k} className="bg-green-100 text-green-800 hover:bg-green-100">{k}</Badge>)}
-                {!result.matched.length && <p className="text-sm text-gray-500">No keyword matches found yet.</p>}
+                {!result.matched.length && <p className="text-sm text-gray-500">Noch keine Treffer.</p>}
               </CardContent>
             </Card>
             <Card>
-              <CardHeader><CardTitle className="text-base flex items-center gap-2"><XCircle className="w-5 h-5 text-red-500" /> Missing keywords</CardTitle></CardHeader>
+              <CardHeader><CardTitle className="text-base flex items-center gap-2"><XCircle className="w-5 h-5 text-red-500" /> Fehlende Schlüsselwörter</CardTitle></CardHeader>
               <CardContent className="flex flex-wrap gap-2">
                 {result.missing.map((k) => <Badge key={k} variant="destructive">{k}</Badge>)}
-                {!result.missing.length && <p className="text-sm text-green-600">Nothing missing — full keyword coverage!</p>}
+                {!result.missing.length && <p className="text-sm text-green-600">Nichts fehlt, alle Schlüsselwörter abgedeckt!</p>}
               </CardContent>
             </Card>
           </div>
 
           <Card>
-            <CardHeader><CardTitle className="text-base flex items-center gap-2"><AlertTriangle className="w-5 h-5 text-yellow-500" /> Tips to improve</CardTitle></CardHeader>
+            <CardHeader><CardTitle className="text-base flex items-center gap-2"><AlertTriangle className="w-5 h-5 text-yellow-500" /> Tipps zur Verbesserung</CardTitle></CardHeader>
             <CardContent>
               <ul className="space-y-2">
                 {result.tips.map((t, i) => (
@@ -194,7 +194,7 @@ export default function ATSChecker() {
           </Card>
 
           <div className="flex justify-center gap-3">
-            <Button variant="outline" onClick={reset}><RotateCcw className="w-4 h-4 mr-2" /> Check another resume</Button>
+            <Button variant="outline" onClick={reset}><RotateCcw className="w-4 h-4 mr-2" /> Anderen Lebenslauf prüfen</Button>
           </div>
         </motion.div>
       )}

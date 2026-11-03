@@ -104,10 +104,10 @@ export default function Profile() {
       >
         <div className="flex items-center gap-3 mb-4">
           <UserIcon className="w-8 h-8 text-blue-600" />
-          <h1 className="text-3xl font-bold text-gray-900">My Profile</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Mein Profil</h1>
         </div>
         <p className="text-gray-600 text-lg">
-          Manage your account settings and personal information.
+          Verwalte Konto und persönliche Daten.
         </p>
       </motion.div>
 
@@ -115,7 +115,7 @@ export default function Profile() {
         {/* Profile Picture Section */}
         <Card className="bg-white/80 backdrop-blur-sm border border-gray-200">
           <CardHeader>
-            <CardTitle>Profile Picture</CardTitle>
+            <CardTitle>Profilbild</CardTitle>
           </CardHeader>
           <CardContent className="flex items-center gap-6">
             <div className="relative">
@@ -154,7 +154,7 @@ export default function Profile() {
           <CardContent className="space-y-6">
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="fullName">Full Name</Label>
+                <Label htmlFor="fullName">Vollständiger Name</Label>
                 <Input
                   id="fullName"
                   value={formData.full_name}
@@ -163,7 +163,7 @@ export default function Profile() {
                 />
               </div>
               <div>
-                <Label htmlFor="email">Email Address</Label>
+                <Label htmlFor="email">E-Mail-Adresse</Label>
                 <Input
                   id="email"
                   type="email"
@@ -171,13 +171,13 @@ export default function Profile() {
                   disabled
                   className="bg-gray-50"
                 />
-                <p className="text-xs text-gray-500 mt-1">Email cannot be changed</p>
+                <p className="text-xs text-gray-500 mt-1">E-Mail kann nicht geändert werden</p>
               </div>
             </div>
 
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="phone">Phone Number</Label>
+                <Label htmlFor="phone">Telefonnummer</Label>
                 <div className="relative">
                   <Phone className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                   <Input
@@ -205,7 +205,7 @@ export default function Profile() {
             </div>
 
             <div>
-              <Label htmlFor="bio">Bio</Label>
+              <Label htmlFor="bio">Über mich</Label>
               <Textarea
                 id="bio"
                 value={formData.bio}
@@ -220,12 +220,12 @@ export default function Profile() {
         {/* Professional Information */}
         <Card className="bg-white/80 backdrop-blur-sm border border-gray-200">
           <CardHeader>
-            <CardTitle>Professional Information</CardTitle>
+            <CardTitle>Berufliche Angaben</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <Label htmlFor="jobTitle">Job Title</Label>
+                <Label htmlFor="jobTitle">Positionsbezeichnung</Label>
                 <div className="relative">
                   <Briefcase className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                   <Input
@@ -238,7 +238,7 @@ export default function Profile() {
                 </div>
               </div>
               <div>
-                <Label htmlFor="company">Current Company</Label>
+                <Label htmlFor="company">Aktuelles Unternehmen</Label>
                 <Input
                   id="company"
                   value={formData.company}
@@ -249,7 +249,7 @@ export default function Profile() {
             </div>
 
             <div>
-              <Label htmlFor="experienceYears">Years of Experience</Label>
+              <Label htmlFor="experienceYears">Berufsjahre</Label>
               <Input
                 id="experienceYears"
                 type="number"
@@ -266,21 +266,21 @@ export default function Profile() {
         {/* Account Stats */}
         <Card className="bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200">
           <CardHeader>
-            <CardTitle className="text-green-800">Account Statistics</CardTitle>
+            <CardTitle className="text-green-800">Konto-Statistik</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-700">3</div>
-                <div className="text-sm text-green-600">Resumes Created</div>
+                <div className="text-sm text-green-600">Erstellte Lebensläufe</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-700">12</div>
-                <div className="text-sm text-green-600">Job Applications</div>
+                <div className="text-sm text-green-600">Bewerbungen</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-green-700">92%</div>
-                <div className="text-sm text-green-600">Average ATS Score</div>
+                <div className="text-sm text-green-600">Ø ATS-Wert</div>
               </div>
             </div>
           </CardContent>
@@ -296,12 +296,12 @@ export default function Profile() {
             {isSaving ? (
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                Saving...
+                Speichern …
               </>
             ) : (
               <>
                 <Save className="w-4 h-4 mr-2" />
-                Save Changes
+                Änderungen speichern
               </>
             )}
           </Button>

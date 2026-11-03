@@ -101,7 +101,7 @@ export default function EventRegistrationModal({ isOpen, onClose }) {
               >
                 <CheckCircle className="w-24 h-24 text-green-400 mx-auto mb-6" />
               </motion.div>
-              <h2 className="text-3xl font-bold text-white mb-4">Registration Successful! 🎉</h2>
+              <h2 className="text-3xl font-bold text-white mb-4">Anmeldung erfolgreich! 🎉</h2>
               <p className="text-gray-300 text-lg mb-2">
                 Welcome to the Mega Student Summit 2024!
               </p>
@@ -140,7 +140,7 @@ export default function EventRegistrationModal({ isOpen, onClose }) {
                   </div>
 
                   <div>
-                    <Label htmlFor="email" className="text-white mb-2">Email Address *</Label>
+                    <Label htmlFor="email" className="text-white mb-2">E-Mail-Adresse *</Label>
                     <Input
                       id="email"
                       type="email"
@@ -153,7 +153,7 @@ export default function EventRegistrationModal({ isOpen, onClose }) {
                   </div>
 
                   <div>
-                    <Label htmlFor="phone" className="text-white mb-2">Phone Number *</Label>
+                    <Label htmlFor="phone" className="text-white mb-2">Telefonnummer *</Label>
                     <Input
                       id="phone"
                       type="tel"
@@ -166,7 +166,7 @@ export default function EventRegistrationModal({ isOpen, onClose }) {
                   </div>
 
                   <div>
-                    <Label htmlFor="college" className="text-white mb-2">College/University *</Label>
+                    <Label htmlFor="college" className="text-white mb-2">Hochschule *</Label>
                     <Input
                       id="college"
                       value={formData.college}
@@ -178,7 +178,7 @@ export default function EventRegistrationModal({ isOpen, onClose }) {
                   </div>
 
                   <div>
-                    <Label htmlFor="year" className="text-white mb-2">Current Year *</Label>
+                    <Label htmlFor="year" className="text-white mb-2">Aktuelles Jahr *</Label>
                     <Select value={formData.year} onValueChange={(value) => handleInputChange('year', value)}>
                       <SelectTrigger className="bg-white/10 border-white/20 text-white">
                         <SelectValue placeholder="Select year" />
@@ -188,7 +188,7 @@ export default function EventRegistrationModal({ isOpen, onClose }) {
                         <SelectItem value="2nd Year">2nd Year</SelectItem>
                         <SelectItem value="3rd Year">3rd Year</SelectItem>
                         <SelectItem value="4th Year">4th Year</SelectItem>
-                        <SelectItem value="Graduate">Graduate</SelectItem>
+                        <SelectItem value="Graduate">Absolvent</SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -206,7 +206,7 @@ export default function EventRegistrationModal({ isOpen, onClose }) {
                 </div>
 
                 <div>
-                  <Label className="text-white mb-3 block">Areas of Interest</Label>
+                  <Label className="text-white mb-3 block">Interessensgebiete</Label>
                   <div className="grid grid-cols-2 gap-2">
                     {interests.map((interest) => (
                       <button
@@ -226,7 +226,7 @@ export default function EventRegistrationModal({ isOpen, onClose }) {
                 </div>
 
                 <div>
-                  <Label htmlFor="referral_code" className="text-white mb-2">Referral Code (Optional)</Label>
+                  <Label htmlFor="referral_code" className="text-white mb-2">Empfehlungscode (optional)</Label>
                   <Input
                     id="referral_code"
                     value={formData.referral_code}

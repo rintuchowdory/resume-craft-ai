@@ -70,7 +70,7 @@ export default function About() {
           >
             <div className="flex items-center justify-center gap-2 mb-4">
               <Heart className="w-8 h-8 text-red-500" />
-              <h1 className="text-5xl font-bold text-gray-900">About ResumeAI</h1>
+              <h1 className="text-5xl font-bold text-gray-900">Über ResumeAI</h1>
             </div>
             
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
@@ -244,7 +244,7 @@ export default function About() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Meet Our Team</h2>
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Unser Team</h2>
             <p className="text-xl text-gray-600">
               Passionate individuals from Jhansi working to transform career opportunities
             </p>
@@ -299,7 +299,7 @@ export default function About() {
               </Link>
               <Link to={createPageUrl("Contact")}>
                 <Button variant="outline" size="lg" className="px-8 py-4">
-                  Get in Touch
+                  Kontakt aufnehmen
                 </Button>
               </Link>
             </div>

@@ -51,13 +51,13 @@ const AuthenticatedApp = () => {
                 onClick={() => setGuestOverride(true)}
                 className="rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 px-4 py-2.5 text-sm font-semibold text-[#04120c]"
               >
-                Continue without an account
+                Ohne Konto fortfahren
               </button>
               <button
                 onClick={() => navigateToLogin()}
                 className="rounded-lg border border-white/15 px-4 py-2.5 text-sm font-medium text-white/80 hover:bg-white/5"
               >
-                Try signing in again
+                Erneut anmelden
               </button>
             </div>
           </div>

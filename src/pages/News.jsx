@@ -98,7 +98,7 @@ export default function News() {
       >
         <div className="flex items-center gap-3 mb-4">
           <Bell className="w-8 h-8 text-red-600" />
-          <h1 className="text-3xl font-bold text-gray-900">Career News & Trends</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Karriere-News & Trends</h1>
           <Badge className="bg-gradient-to-r from-red-500 to-pink-500 text-white">
             <TrendingUp className="w-4 h-4 mr-1" />
             Live
@@ -122,7 +122,7 @@ export default function News() {
             />
           </div>
           <Button onClick={loadNews} variant="outline" className="border-green-200 hover:bg-green-50">
-            Refresh News
+            News aktualisieren
           </Button>
         </div>
         
@@ -188,7 +188,7 @@ export default function News() {
                 >
                   <a href={article.url} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-4 h-4 mr-2" />
-                    Read Full Article
+                    Ganzen Artikel lesen
                   </a>
                 </Button>
               </CardContent>

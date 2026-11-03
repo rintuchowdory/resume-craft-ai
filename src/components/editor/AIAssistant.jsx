@@ -143,13 +143,13 @@ export default function AIAssistant({ resume, onUpdateResume }) {
       <CardHeader>
         <CardTitle className="flex items-center gap-2 text-gray-900">
           <Sparkles className="w-5 h-5 text-purple-600" />
-          AI Assistant
+          KI-Assistent
         </CardTitle>
       </CardHeader>
       <CardContent className="space-y-4">
         {/* Job Description Input */}
         <div>
-          <h4 className="font-medium text-gray-900 mb-2">Optimize for Job</h4>
+          <h4 className="font-medium text-gray-900 mb-2">Auf Stelle abstimmen</h4>
           <Textarea
             value={jobDescription}
             onChange={(e) => setJobDescription(e.target.value)}
@@ -165,12 +165,12 @@ export default function AIAssistant({ resume, onUpdateResume }) {
             {isGenerating ? (
               <>
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                Analyzing...
+                Analyse läuft …
               </>
             ) : (
               <>
                 <Target className="w-4 h-4 mr-2" />
-                Optimize Resume
+                Lebenslauf optimieren
               </>
             )}
           </Button>
@@ -178,7 +178,7 @@ export default function AIAssistant({ resume, onUpdateResume }) {
 
         {/* Experience AI Generation */}
         <div className="space-y-2">
-          <h4 className="font-medium text-gray-900">Enhance Experience</h4>
+          <h4 className="font-medium text-gray-900">Erfahrung ausbauen</h4>
           {resume.experience?.map((experience, index) => (
             <div key={index} className="p-3 bg-white/50 rounded-lg">
               <p className="text-sm font-medium text-gray-800 mb-2">
@@ -194,12 +194,12 @@ export default function AIAssistant({ resume, onUpdateResume }) {
                 {isGenerating ? (
                   <>
                     <div className="animate-spin rounded-full h-3 w-3 border-b-2 border-purple-500 mr-2"></div>
-                    Generating...
+                    Wird erzeugt …
                   </>
                 ) : (
                   <>
                     <Wand2 className="w-3 h-3 mr-2" />
-                    Generate Bullets
+                    Stichpunkte erzeugen
                   </>
                 )}
               </Button>
@@ -210,7 +210,7 @@ export default function AIAssistant({ resume, onUpdateResume }) {
         {/* AI Suggestions */}
         {suggestions.length > 0 && (
           <div className="space-y-4">
-            <h4 className="font-medium text-gray-900">AI Suggestions</h4>
+            <h4 className="font-medium text-gray-900">KI-Vorschläge</h4>
             {suggestions.map((suggestion, index) => (
               <motion.div
                 key={index}
@@ -248,7 +248,7 @@ export default function AIAssistant({ resume, onUpdateResume }) {
                         onClick={() => addSkillsToResume(suggestion.items)}
                         className="text-xs"
                       >
-                        Add All Skills
+                        Alle übernehmen
                       </Button>
                     )}
                   </div>

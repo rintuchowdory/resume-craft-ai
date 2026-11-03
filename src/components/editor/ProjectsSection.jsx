@@ -56,11 +56,11 @@ export default function ProjectsSection({ data, onChange }) {
         <div className="flex justify-between items-center">
           <CardTitle className="flex items-center gap-2 text-gray-900">
             <Code className="w-5 h-5" />
-            Projects
+            Projekte
           </CardTitle>
           <Button onClick={addProject} size="sm" variant="outline" className="border-green-200 hover:bg-green-50">
             <Plus className="w-4 h-4 mr-2" />
-            Add Project
+            Projekt hinzufügen
           </Button>
         </div>
       </CardHeader>
@@ -127,7 +127,7 @@ function ProjectCard({
       
       <div className="grid md:grid-cols-2 gap-4">
         <div>
-          <Label>Project Name</Label>
+          <Label>Projektname</Label>
           <Input
             value={project.name || ""}
             onChange={(e) => updateProject(index, 'name', e.target.value)}
@@ -135,7 +135,7 @@ function ProjectCard({
           />
         </div>
         <div>
-          <Label>Link (Optional)</Label>
+          <Label>Link (optional)</Label>
           <Input
             value={project.link || ""}
             onChange={(e) => updateProject(index, 'link', e.target.value)}
@@ -145,7 +145,7 @@ function ProjectCard({
       </div>
       
       <div>
-        <Label>Description</Label>
+        <Label>Beschreibung</Label>
         <Textarea
           value={project.description || ""}
           onChange={(e) => updateProject(index, 'description', e.target.value)}
@@ -155,7 +155,7 @@ function ProjectCard({
       </div>
       
       <div>
-        <Label>Technologies Used</Label>
+        <Label>Verwendete Technologien</Label>
         <div className="flex gap-2 mb-2">
           <Input
             value={newTech}

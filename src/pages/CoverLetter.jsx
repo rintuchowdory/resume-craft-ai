@@ -93,7 +93,7 @@ export default function CoverLetter() {
     <div className="container mx-auto px-4 py-12 max-w-5xl">
       <div className="text-center mb-10">
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3 flex items-center justify-center gap-3">
-          <PenLine className="w-8 h-8 text-green-600" /> Cover Letter Generator
+          <PenLine className="w-8 h-8 text-green-600" /> Anschreiben-Generator
         </h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
           Fill in the essentials, pick a tone, and get a ready-to-send cover letter. Everything is generated locally — no sign-in needed.
@@ -118,25 +118,25 @@ export default function CoverLetter() {
             <Textarea placeholder="A concrete achievement (e.g. reduced server costs by 30%)" value={form.achievement} onChange={set("achievement")} className="min-h-[70px]" />
             <Textarea placeholder="Why this company? (optional, one sentence)" value={form.companyMotive} onChange={set("companyMotive")} className="min-h-[70px]" />
             <div>
-              <label className="text-sm text-gray-500 block mb-1.5">Tone</label>
+              <label className="text-sm text-gray-500 block mb-1.5">Tonalität</label>
               <Select value={tone} onValueChange={setTone}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
                   <SelectItem value="professional">Professionell</SelectItem>
-                  <SelectItem value="enthusiastic">Enthusiastic</SelectItem>
-                  <SelectItem value="concise">Concise</SelectItem>
+                  <SelectItem value="enthusiastic">Engagiert</SelectItem>
+                  <SelectItem value="concise">Prägnant</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <Button onClick={generate} disabled={!canGenerate} className="w-full bg-green-600 hover:bg-green-700 h-11">
-              <Mail className="w-4 h-4 mr-2" /> Generate cover letter
+              <Mail className="w-4 h-4 mr-2" /> Anschreiben erzeugen
             </Button>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between">
-            <CardTitle className="text-lg">Your letter</CardTitle>
+            <CardTitle className="text-lg">Dein Anschreiben</CardTitle>
             {letter && <div className="flex gap-2">
               <Button size="sm" variant="outline" onClick={copy}>
                 <Copy className="w-3.5 h-3.5 mr-1" /> {copied ? "Copied!" : "Copy"}
@@ -152,13 +152,13 @@ export default function CoverLetter() {
                 <pre className="whitespace-pre-wrap font-sans text-sm text-gray-800 leading-relaxed border rounded-lg p-5 bg-gray-50 min-h-[380px]">{letter}</pre>
                 <p className="text-xs text-gray-400 mt-2">{wordCount} words — ready to paste into your email or application form.</p>
                 <Button size="sm" variant="ghost" className="mt-3 text-gray-500" onClick={generate}>
-                  <RefreshCw className="w-3.5 h-3.5 mr-1" /> Regenerate with current details
+                  <RefreshCw className="w-3.5 h-3.5 mr-1" /> Mit aktuellen Angaben neu erzeugen
                 </Button>
               </motion.div>
             ) : (
               <div className="h-[380px] flex flex-col items-center justify-center text-gray-400 border-2 border-dashed rounded-lg">
                 <Mail className="w-10 h-10 mb-3 opacity-40" />
-                <p className="text-sm">Fill in the form and hit generate —</p>
+                <p className="text-sm">Formular ausfüllen und generieren —</p>
                 <p className="text-sm">your letter appears here.</p>
               </div>
             )}

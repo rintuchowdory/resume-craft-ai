@@ -79,7 +79,7 @@ function FloatingResume2D() {
         </div>
 
         <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/40">
-          Skills
+          Kenntnisse
         </p>
         <div className="mt-2 flex flex-wrap gap-1.5">
           {["React", "Python", "SQL", "Figma"].map(skill => (
@@ -232,7 +232,7 @@ export default function Home() {
                   size="sm"
                   className="rounded-lg bg-white text-[#0b1410] hover:bg-white/90"
                 >
-                  Learn More
+                  Mehr erfahren
                 </Button>
               </Link>
               <button
@@ -259,8 +259,8 @@ export default function Home() {
               </div>
 
               <h1 className="text-4xl font-semibold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
-                Land Your
-                <span className="text-gradient-mint"> Dream Job</span>
+                Finde deinen
+                <span className="text-gradient-mint"> Traumjob</span>
                 <br />
                 with AI Power
               </h1>
@@ -292,7 +292,7 @@ export default function Home() {
                     size="lg"
                     className="group w-full rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 px-7 py-6 text-base font-semibold text-[#04120c] shadow-lg shadow-emerald-500/20 transition hover:from-emerald-300 hover:to-teal-400 sm:w-auto"
                   >
-                    Start Building Free
+                    Kostenlos starten
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 </Link>
@@ -302,7 +302,7 @@ export default function Home() {
                     variant="outline"
                     className="w-full rounded-xl border-white/15 bg-white/[0.03] px-7 py-6 text-base font-semibold text-white/85 transition hover:border-emerald-400/40 hover:bg-white/[0.06] hover:text-white sm:w-auto"
                   >
-                    Browse Jobs
+                    Stellen ansehen
                   </Button>
                 </Link>
               </div>
@@ -315,7 +315,7 @@ export default function Home() {
                 <span className="h-3 w-px bg-white/15" />
                 <span className="inline-flex items-center gap-1.5">
                   <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400/70" />
-                  Free forever plan
+                  Dauerhaft kostenlos
                 </span>
               </div>
             </motion.div>
@@ -336,7 +336,7 @@ export default function Home() {
               >
                 <div className="flex items-center gap-2 text-emerald-300">
                   <Target className="h-4 w-4" />
-                  <span className="text-xs font-semibold">ATS Score: 98%</span>
+                  <span className="text-xs font-semibold">ATS-Wert: 98%</span>
                 </div>
               </motion.div>
 
@@ -390,7 +390,7 @@ export default function Home() {
               Why ResumeAI
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Powerful features, unfair advantage
+              Starke Funktionen, echter Vorteil
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-white/55">
               Everything you need to go from blank page to interview-ready
@@ -427,13 +427,13 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="mb-12 text-center">
             <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-400">
-              Workflow
+              Ablauf
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              How it works
+              So funktioniert's
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-white/55">
-              Get from idea to interview-ready resume in just 4 simple steps.
+              Vom Entwurf zum fertigen Lebenslauf in 4 Schritten.
             </p>
           </Reveal>
 
@@ -467,13 +467,13 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="mb-12 text-center">
             <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-400">
-              Proof
+              Nachweis
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Loved by job seekers worldwide
+              Beliebt bei Jobsuchenden weltweit
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-white/55">
-              Join thousands who landed their dream jobs.
+              Tausende haben ihren Traumjob gefunden.
             </p>
           </Reveal>
 
@@ -521,7 +521,7 @@ export default function Home() {
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-medium text-emerald-300">
               <FileText className="h-3.5 w-3.5" />
-              Free to start
+              Kostenlos starten
             </div>
             <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
               Ready to transform your career?
@@ -537,7 +537,7 @@ export default function Home() {
                   className="w-full rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 px-7 py-6 text-base font-semibold text-[#04120c] shadow-lg shadow-emerald-500/20 transition hover:from-emerald-300 hover:to-teal-400 sm:w-auto"
                 >
                   <FileText className="mr-2 h-5 w-5" />
-                  Start Building Free
+                  Kostenlos starten
                 </Button>
               </Link>
               <Link to={createPageUrl("About")}>
@@ -546,22 +546,22 @@ export default function Home() {
                   variant="outline"
                   className="w-full rounded-xl border-white/15 bg-transparent px-7 py-6 text-base font-semibold text-white/85 transition hover:border-emerald-400/40 hover:bg-white/[0.06] hover:text-white sm:w-auto"
                 >
-                  Learn More
+                  Mehr erfahren
                 </Button>
               </Link>
             </div>
             <div className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs text-white/45">
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400/70" />
-                No Credit Card Required
+                Keine Kreditkarte nötig
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400/70" />
-                Free Forever Plan
+                Dauerhaft kostenlos
               </span>
               <span className="inline-flex items-center gap-1.5">
                 <CheckCircle2 className="h-3.5 w-3.5 text-emerald-400/70" />
-                Start in 2 Minutes
+                In 2 Minuten startklar
               </span>
             </div>
           </Reveal>

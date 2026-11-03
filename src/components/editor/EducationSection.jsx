@@ -34,11 +34,11 @@ export default function EducationSection({ data, onChange }) {
         <div className="flex justify-between items-center">
           <CardTitle className="flex items-center gap-2 text-gray-900">
             <GraduationCap className="w-5 h-5" />
-            Education
+            Ausbildung
           </CardTitle>
           <Button onClick={addEducation} size="sm" variant="outline" className="border-green-200 hover:bg-green-50">
             <Plus className="w-4 h-4 mr-2" />
-            Add Education
+            Ausbildung hinzufügen
           </Button>
         </div>
       </CardHeader>
@@ -65,7 +65,7 @@ export default function EducationSection({ data, onChange }) {
               
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
-                  <Label>Degree</Label>
+                  <Label>Abschluss</Label>
                   <Input
                     value={education.degree || ""}
                     onChange={(e) => updateEducation(index, 'degree', e.target.value)}
@@ -73,7 +73,7 @@ export default function EducationSection({ data, onChange }) {
                   />
                 </div>
                 <div>
-                  <Label>Institution</Label>
+                  <Label>Einrichtung</Label>
                   <Input
                     value={education.institution || ""}
                     onChange={(e) => updateEducation(index, 'institution', e.target.value)}
@@ -84,7 +84,7 @@ export default function EducationSection({ data, onChange }) {
               
               <div className="grid md:grid-cols-3 gap-4">
                 <div>
-                  <Label>Location</Label>
+                  <Label>Ort</Label>
                   <Input
                     value={education.location || ""}
                     onChange={(e) => updateEducation(index, 'location', e.target.value)}
@@ -92,7 +92,7 @@ export default function EducationSection({ data, onChange }) {
                   />
                 </div>
                 <div>
-                  <Label>Graduation Year</Label>
+                  <Label>Abschlussjahr</Label>
                   <Input
                     value={education.graduation_year || ""}
                     onChange={(e) => updateEducation(index, 'graduation_year', e.target.value)}
@@ -100,7 +100,7 @@ export default function EducationSection({ data, onChange }) {
                   />
                 </div>
                 <div>
-                  <Label>GPA (Optional)</Label>
+                  <Label>Notendurchschnitt (optional)</Label>
                   <Input
                     value={education.gpa || ""}
                     onChange={(e) => updateEducation(index, 'gpa', e.target.value)}

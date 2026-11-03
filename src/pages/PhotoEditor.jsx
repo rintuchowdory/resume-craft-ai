@@ -150,7 +150,7 @@ export default function PhotoEditor() {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
             <Camera className="w-6 h-6 text-purple-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">Professional Photo Editor</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">Professioneller Foto-Editor</h1>
           </div>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Transform your photos into professional headshots perfect for your resume
@@ -164,7 +164,7 @@ export default function PhotoEditor() {
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Upload className="w-5 h-5" />
-                  Upload Photo
+                  Foto hochladen
                 </CardTitle>
               </CardHeader>
               <CardContent>
@@ -174,9 +174,9 @@ export default function PhotoEditor() {
                     className="border-2 border-dashed border-purple-300 rounded-lg p-8 sm:p-12 text-center cursor-pointer hover:border-purple-400 transition-colors"
                   >
                     <Camera className="w-12 h-12 sm:w-16 sm:h-16 text-purple-400 mx-auto mb-4" />
-                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Upload your photo</h3>
-                    <p className="text-gray-600 mb-4 text-sm sm:text-base">Drag and drop or click to select</p>
-                    <Badge variant="outline" className="text-xs sm:text-sm">JPG, PNG up to 10MB</Badge>
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">Foto hochladen</h3>
+                    <p className="text-gray-600 mb-4 text-sm sm:text-base">Ziehen oder klicken zum Auswählen</p>
+                    <Badge variant="outline" className="text-xs sm:text-sm">JPG, PNG bis 10 MB</Badge>
                     <Input
                       ref={fileInputRef}
                       type="file"
@@ -202,7 +202,7 @@ export default function PhotoEditor() {
                         className="flex-1"
                       >
                         <Upload className="w-4 h-4 mr-2" />
-                        Change Photo
+                        Foto ändern
                       </Button>
                       <Button 
                         onClick={downloadImage}
@@ -210,7 +210,7 @@ export default function PhotoEditor() {
                         disabled={!editedImage}
                       >
                         <Download className="w-4 h-4 mr-2" />
-                        Download
+                        Herunterladen
                       </Button>
                     </div>
                     <Input
@@ -231,7 +231,7 @@ export default function PhotoEditor() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Sparkles className="w-5 h-5" />
-                    AI Enhancement
+                    KI-Verbesserung
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -252,7 +252,7 @@ export default function PhotoEditor() {
                       disabled={isProcessing}
                     >
                       <Palette className="w-4 h-4 mr-2" />
-                      Generate Professional Background
+                      Professionellen Hintergrund erzeugen
                     </Button>
                   </div>
                 </CardContent>
@@ -267,7 +267,7 @@ export default function PhotoEditor() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Zap className="w-5 h-5" />
-                    Manual Adjustments
+                    Manuelle Anpassungen
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
@@ -319,7 +319,7 @@ export default function PhotoEditor() {
                     className="w-full"
                   >
                     <RotateCcw className="w-4 h-4 mr-2" />
-                    Reset All
+                    Alles zurücksetzen
                   </Button>
                 </CardContent>
               </Card>
@@ -329,7 +329,7 @@ export default function PhotoEditor() {
                 <CardHeader>
                   <CardTitle className="text-green-800 flex items-center gap-2">
                     <User className="w-5 h-5" />
-                    Professional Photo Tips
+                    Tipps für Bewerbungsfotos
                   </CardTitle>
                 </CardHeader>
                 <CardContent>

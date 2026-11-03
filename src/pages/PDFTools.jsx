@@ -108,7 +108,7 @@ export default function PDFTools() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Upload className="w-5 h-5" />
-                Upload PDF Resume
+                PDF-Lebenslauf hochladen
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -118,9 +118,9 @@ export default function PDFTools() {
                   className="border-2 border-dashed border-green-300 rounded-lg p-8 sm:p-12 text-center cursor-pointer hover:border-green-400 transition-colors"
                 >
                   <FileText className="w-12 h-12 sm:w-16 sm:h-16 text-green-400 mx-auto mb-4" />
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Upload your PDF resume</h3>
-                  <p className="text-gray-600 mb-4 text-sm sm:text-base">Drag and drop or click to select</p>
-                  <Badge variant="outline" className="text-xs sm:text-sm">PDF files only, up to 50MB</Badge>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Lebenslauf-PDF hochladen</h3>
+                  <p className="text-gray-600 mb-4 text-sm sm:text-base">Ziehen oder klicken zum Auswählen</p>
+                  <Badge variant="outline" className="text-xs sm:text-sm">Nur PDF, bis 50 MB</Badge>
                   <Input
                     ref={fileInputRef}
                     type="file"
@@ -142,7 +142,7 @@ export default function PDFTools() {
                       variant="outline"
                       size="sm"
                     >
-                      Change File
+                      Datei ändern
                     </Button>
                   </div>
                   <Input
@@ -185,26 +185,26 @@ export default function PDFTools() {
                     className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
                   />
                   <div className="flex justify-between text-xs text-gray-500 mt-1">
-                    <span>Maximum compression</span>
-                    <span>Best quality</span>
+                    <span>Maximale Komprimierung</span>
+                    <span>Beste Qualität</span>
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                   <div className="p-3 bg-red-50 rounded-lg">
                     <Shrink className="w-6 h-6 text-red-600 mx-auto mb-2" /> {/* Replaced Compress with Shrink */}
-                    <h4 className="font-medium text-red-800">High Compression</h4>
-                    <p className="text-xs text-red-600">Smaller file, lower quality</p>
+                    <h4 className="font-medium text-red-800">Starke Komprimierung</h4>
+                    <p className="text-xs text-red-600">Kleinere Datei, geringere Qualität</p>
                   </div>
                   <div className="p-3 bg-yellow-50 rounded-lg">
                     <Zap className="w-6 h-6 text-yellow-600 mx-auto mb-2" />
-                    <h4 className="font-medium text-yellow-800">Balanced</h4>
-                    <p className="text-xs text-yellow-600">Good size & quality</p>
+                    <h4 className="font-medium text-yellow-800">Ausgewogen</h4>
+                    <p className="text-xs text-yellow-600">Gute Größe & Qualität</p>
                   </div>
                   <div className="p-3 bg-green-50 rounded-lg">
                     <Maximize className="w-6 h-6 text-green-600 mx-auto mb-2" />
-                    <h4 className="font-medium text-green-800">High Quality</h4>
-                    <p className="text-xs text-green-600">Larger file, best quality</p>
+                    <h4 className="font-medium text-green-800">Hohe Qualität</h4>
+                    <p className="text-xs text-green-600">Größere Datei, beste Qualität</p>
                   </div>
                 </div>
 
@@ -217,7 +217,7 @@ export default function PDFTools() {
                     {isProcessing ? (
                       <>
                         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
-                        Compressing...
+                        Wird komprimiert …
                       </>
                     ) : (
                       <>
@@ -227,15 +227,15 @@ export default function PDFTools() {
                     )}
                   </Button>
                   <Button onClick={resetTool} variant="outline">
-                    Reset
+                    Zurücksetzen
                   </Button>
                 </div>
 
                 {isProcessing && (
                   <div className="space-y-2">
                     <div className="flex justify-between text-sm">
-                      <span>Processing...</span>
-                      <span>Please wait</span>
+                      <span>Wird verarbeitet …</span>
+                      <span>Bitte warten</span>
                     </div>
                     <Progress value={33} className="w-full" />
                   </div>
@@ -250,18 +250,18 @@ export default function PDFTools() {
               <CardHeader>
                 <CardTitle className="text-green-800 flex items-center gap-2">
                   <Download className="w-5 h-5" />
-                  Compression Complete!
+                  Komprimierung fertig!
                 </CardTitle>
               </CardHeader>
               <CardContent>
                 <div className="space-y-4">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-center">
                     <div className="p-4 bg-white rounded-lg">
-                      <h4 className="font-medium text-gray-900 mb-1">Original Size</h4>
+                      <h4 className="font-medium text-gray-900 mb-1">Originalgröße</h4>
                       <p className="text-2xl font-bold text-gray-700">{formatFileSize(fileSize)}</p>
                     </div>
                     <div className="p-4 bg-white rounded-lg">
-                      <h4 className="font-medium text-gray-900 mb-1">Compressed Size</h4>
+                      <h4 className="font-medium text-gray-900 mb-1">Komprimierte Größe</h4>
                       <p className="text-2xl font-bold text-green-600">{formatFileSize(processedFile.size)}</p>
                     </div>
                   </div>
@@ -278,7 +278,7 @@ export default function PDFTools() {
                     className="w-full bg-gradient-to-r from-green-500 to-emerald-600"
                   >
                     <Download className="w-4 h-4 mr-2" />
-                    Download Compressed PDF
+                    Komprimierte PDF laden
                   </Button>
                 </div>
               </CardContent>
@@ -290,13 +290,13 @@ export default function PDFTools() {
             <CardHeader>
               <CardTitle className="text-blue-800 flex items-center gap-2">
                 <Info className="w-5 h-5" />
-                Best Practices for Resume PDFs
+                Tipps für Lebenslauf-PDFs
               </CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-blue-700">
                 <div>
-                  <h4 className="font-semibold mb-2">File Size Guidelines:</h4>
+                  <h4 className="font-semibold mb-2">Richtwerte zur Dateigröße:</h4>
                   <ul className="space-y-1">
                     <li>• Email attachments: &lt; 2MB</li>
                     <li>• Online applications: &lt; 5MB</li>
@@ -305,7 +305,7 @@ export default function PDFTools() {
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold mb-2">Quality Tips:</h4>
+                  <h4 className="font-semibold mb-2">Qualitätstipps:</h4>
                   <ul className="space-y-1">
                     <li>• Keep text readable and sharp</li>
                     <li>• Maintain professional appearance</li>

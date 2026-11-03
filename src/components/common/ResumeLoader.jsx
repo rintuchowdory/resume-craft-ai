@@ -26,13 +26,13 @@ export default function ResumeLoader() {
         </div>
         
         <div className="space-y-3">
-          <h3 className="text-2xl font-bold text-gray-800">Loading...</h3>
+          <h3 className="text-2xl font-bold text-gray-800">Wird geladen …</h3>
           <div className="flex items-center justify-center space-x-2 text-green-600">
             <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce"></div>
             <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce delay-100"></div>
             <div className="w-2 h-2 bg-green-400 rounded-full animate-bounce delay-200"></div>
           </div>
-          <p className="text-gray-600">Crafting your professional experience...</p>
+          <p className="text-gray-600">Deine Erfahrung wird formuliert …</p>
         </div>
       </div>
       <style jsx>{`

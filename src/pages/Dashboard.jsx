@@ -202,10 +202,10 @@ export default function Dashboard() {
         >
           <div>
             <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-400">
-              Workspace
+              Arbeitsbereich
             </p>
             <h1 className="mt-1 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
-              Your resumes
+              Deine Lebensläufe
             </h1>
             <p className="mt-2 text-sm text-white/55">
               Erstelle und verwalte deine Lebensläufe.
@@ -217,7 +217,7 @@ export default function Dashboard() {
             className="rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 px-5 py-6 text-sm font-semibold text-[#04120c] shadow-lg shadow-emerald-500/20 transition hover:from-emerald-300 hover:to-teal-400"
           >
             <Plus className="mr-2 h-5 w-5" />
-            New Resume
+            Neuer Lebenslauf
           </Button>
         </motion.div>
 
@@ -268,7 +268,7 @@ export default function Dashboard() {
             <div className="mb-4 flex items-center justify-between">
               <div>
                 <h2 className="text-sm font-semibold text-white">
-                  ATS score by resume
+                  ATS-Wert je Lebenslauf
                 </h2>
                 <p className="text-xs text-white/45">
                   Latest {chartData.length || 0} resume
@@ -336,7 +336,7 @@ export default function Dashboard() {
                 <div>
                   <Gauge className="mx-auto h-6 w-6 text-white/25" />
                   <p className="mt-2 text-sm text-white/45">
-                    Create your first resume to see score analytics.
+                    Erstelle deinen ersten Lebenslauf für Auswertungen.
                   </p>
                 </div>
               </div>
@@ -352,7 +352,7 @@ export default function Dashboard() {
             <div className="mb-4 flex items-center justify-between">
               <div>
                 <h2 className="text-sm font-semibold text-white">
-                  Profile readiness
+                  Profil-Vollständigkeit
                 </h2>
                 <p className="text-xs text-white/45">
                   How complete your saved resumes are
@@ -384,7 +384,7 @@ export default function Dashboard() {
 
             {!hasSkillsData && (
               <p className="mt-5 text-xs leading-relaxed text-white/40">
-                Readiness updates automatically once you save a resume.
+                Aktualisiert sich beim Speichern automatisch.
               </p>
             )}
           </motion.div>
@@ -393,7 +393,7 @@ export default function Dashboard() {
         {/* Resume grid */}
         <div className="mt-10">
           <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-sm font-semibold text-white">All resumes</h2>
+            <h2 className="text-sm font-semibold text-white">Alle Lebensläufe</h2>
             <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[11px] text-white/50">
               {stats.count} total
             </span>
@@ -418,7 +418,7 @@ export default function Dashboard() {
               <div className="mx-auto mb-5 grid h-16 w-16 place-items-center rounded-2xl border border-emerald-400/25 bg-emerald-400/10">
                 <FileText className="h-7 w-7 text-emerald-300" />
               </div>
-              <h3 className="text-xl font-semibold text-white">No resumes yet</h3>
+              <h3 className="text-xl font-semibold text-white">Noch keine Lebensläufe</h3>
               <p className="mx-auto mt-2 max-w-md text-sm text-white/55">
                 Get started by creating your first AI-powered resume. It only
                 takes a few minutes!
@@ -429,7 +429,7 @@ export default function Dashboard() {
                 className="mt-6 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 px-6 py-6 text-sm font-semibold text-[#04120c]"
               >
                 <Plus className="mr-2 h-5 w-5" />
-                Create Your First Resume
+                Ersten Lebenslauf erstellen
               </Button>
             </motion.div>
           ) : (
@@ -484,7 +484,7 @@ export default function Dashboard() {
                         className="w-full rounded-lg border-white/12 bg-white/[0.03] text-white/80 transition group-hover:border-emerald-400/40 group-hover:text-white"
                       >
                         <Eye className="mr-2 h-4 w-4" />
-                        Edit
+                        Bearbeiten
                       </Button>
                     </Link>
                   </div>

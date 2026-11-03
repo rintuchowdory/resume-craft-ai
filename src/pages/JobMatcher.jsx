@@ -114,13 +114,13 @@ export default function JobMatcher() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-gray-900">
                 <Upload className="w-5 h-5" />
-                Job Analysis Setup
+                Abgleich einrichten
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Select Resume
+                  Lebenslauf wählen
                 </label>
                 <Select value={selectedResume} onValueChange={setSelectedResume}>
                   <SelectTrigger>
@@ -138,7 +138,7 @@ export default function JobMatcher() {
 
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Job Description
+                  Stellenbeschreibung
                 </label>
                 <Textarea
                   value={jobDescription}
@@ -158,12 +158,12 @@ export default function JobMatcher() {
                 {isAnalyzing ? (
                   <>
                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                    Analyzing Match...
+                    Abgleich läuft …
                   </>
                 ) : (
                   <>
                     <Sparkles className="w-5 h-5 mr-2" />
-                    Analyze Job Match
+                    Abgleich starten
                   </>
                 )}
               </Button>
@@ -183,7 +183,7 @@ export default function JobMatcher() {
               <Card className={`${getMatchBgColor(matchResult.match_percentage)} border border-gray-200`}>
                 <CardHeader className="pb-4">
                   <CardTitle className="flex items-center justify-between">
-                    <span>Match Score</span>
+                    <span>Übereinstimmung</span>
                     <TrendingUp className={`w-5 h-5 ${getMatchColor(matchResult.match_percentage)}`} />
                   </CardTitle>
                 </CardHeader>
@@ -205,11 +205,11 @@ export default function JobMatcher() {
               {/* Experience Relevance */}
               <Card className="bg-blue-50 border border-blue-200">
                 <CardHeader>
-                  <CardTitle className="text-blue-800">Experience Relevance</CardTitle>
+                  <CardTitle className="text-blue-800">Passung der Erfahrung</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-blue-700">Relevance Score</span>
+                    <span className="text-blue-700">Relevanz</span>
                     <span className="font-bold text-blue-800">{matchResult.experience_relevance}%</span>
                   </div>
                   <Progress value={matchResult.experience_relevance} className="w-full" />
@@ -222,7 +222,7 @@ export default function JobMatcher() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-green-800">
                       <CheckCircle className="w-5 h-5" />
-                      Strong Points
+                      Stärken
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -244,7 +244,7 @@ export default function JobMatcher() {
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2 text-orange-800">
                       <AlertCircle className="w-5 h-5" />
-                      Improvement Areas
+                      Verbesserungsbereiche
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
@@ -285,12 +285,12 @@ export default function JobMatcher() {
           {/* Skills Analysis */}
           <Card className="bg-white/80 backdrop-blur-sm">
             <CardHeader>
-              <CardTitle>Skills Analysis</CardTitle>
+              <CardTitle>Kenntnis-Analyse</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               {matchResult.matching_skills?.length > 0 && (
                 <div>
-                  <h4 className="font-medium text-green-700 mb-2">Matching Skills</h4>
+                  <h4 className="font-medium text-green-700 mb-2">Passende Kenntnisse</h4>
                   <div className="flex flex-wrap gap-2">
                     {matchResult.matching_skills.map((skill, index) => (
                       <Badge key={index} className="bg-green-100 text-green-800">
@@ -303,7 +303,7 @@ export default function JobMatcher() {
 
               {matchResult.missing_skills?.length > 0 && (
                 <div>
-                  <h4 className="font-medium text-red-700 mb-2">Missing Skills</h4>
+                  <h4 className="font-medium text-red-700 mb-2">Fehlende Kenntnisse</h4>
                   <div className="flex flex-wrap gap-2">
                     {matchResult.missing_skills.map((skill, index) => (
                       <Badge key={index} variant="outline" className="border-red-200 text-red-700">
@@ -320,7 +320,7 @@ export default function JobMatcher() {
           {matchResult.keywords_to_add?.length > 0 && (
             <Card className="bg-white/80 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle>Recommended Keywords</CardTitle>
+                <CardTitle>Empfohlene Schlüsselwörter</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-sm text-gray-600 mb-4">
