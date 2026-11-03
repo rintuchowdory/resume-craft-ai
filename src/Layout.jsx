@@ -62,35 +62,35 @@ const CustomAvatar = ({ src, alt, fallback, className, fallbackClassName }) => {
 
 const navigationItems = [
   {
-    title: "Home",
-    url: createPageUrl("Home"),
+    title: "Start",
+    url: createPageUrl("Start"),
     icon: Home,
   },
   {
-    title: "Dashboard",
-    url: createPageUrl("Dashboard"),
+    title: "Übersicht",
+    url: createPageUrl("Übersicht"),
     icon: FileText,
     requiresAuth: true,
   },
   {
-    title: "Templates",
-    url: createPageUrl("Templates"),
+    title: "Vorlagen",
+    url: createPageUrl("Vorlagen"),
     icon: Sparkles,
   },
   {
-    title: "Job Board",
+    title: "Stellen",
     url: createPageUrl("Jobs"),
     icon: Briefcase,
   },
   {
-    title: "Job Matcher",
+    title: "Job-Abgleich",
     url: createPageUrl("JobMatcher"),
     icon: Target,
     requiresAuth: true,
   },
   {
-    title: "Analytics", 
-    url: createPageUrl("Analytics"),
+    title: "Statistik", 
+    url: createPageUrl("Statistik"),
     icon: TrendingUp,
     requiresAuth: true,
   },
@@ -103,20 +103,20 @@ const navigationItems = [
 
 const secondaryItems = [
   {
-    title: "About Us",
+    title: "Über uns",
     url: createPageUrl("About"),
     icon: Info,
   },
   {
-    title: "Contact",
-    url: createPageUrl("Contact"),
+    title: "Kontakt",
+    url: createPageUrl("Kontakt"),
     icon: Mail,
   },
 ];
 
 export default function Layout({ children, currentPageName }) {
   const location = useLocation();
-  const isLanding = currentPageName === "Home";
+  const isLanding = currentPageName === "Start";
   const [currentUser, setCurrentUser] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isGuestMode, setIsGuestMode] = useState(false);
@@ -143,7 +143,7 @@ export default function Layout({ children, currentPageName }) {
       await User.logout();
       setCurrentUser(null);
       setIsGuestMode(true);
-      window.location.href = createPageHref("Home");
+      window.location.href = createPageHref("Start");
     } catch (error) {
       console.error("Logout error:", error);
     }
@@ -173,25 +173,25 @@ export default function Layout({ children, currentPageName }) {
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <Link to={createPageUrl("Home")} className="flex items-center gap-3">
+              <Link to={createPageUrl("Start")} className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
                   <FileText className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h1 className="text-xl font-bold text-white">ResumeAI</h1>
-                  <p className="text-xs text-white/45">AI-Powered Resume Builder</p>
+                  <p className="text-xs text-white/45">KI-gestützter Lebenslauf-Editor</p>
                 </div>
               </Link>
 
               {/* Navigation Links */}
               <div className="hidden md:flex items-center space-x-8">
-                <Link to={createPageUrl("Templates")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Templates</Link>
+                <Link to={createPageUrl("Vorlagen")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Vorlagen</Link>
                 <Link to={createPageUrl("ATSChecker")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">ATS Checker</Link>
                 <Link to={createPageUrl("CoverLetter")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Cover Letter</Link>
                 <Link to={createPageUrl("Jobs")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Jobs</Link>
                 <Link to={createPageUrl("News")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">News</Link>
                 <Link to={createPageUrl("About")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">About</Link>
-                <Link to={createPageUrl("Contact")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Contact</Link>
+                <Link to={createPageUrl("Kontakt")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Kontakt</Link>
               </div>
 
               {/* Auth Buttons */}
@@ -217,7 +217,7 @@ export default function Layout({ children, currentPageName }) {
                       </DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem asChild>
-                        <Link to={createPageUrl("Dashboard")}>
+                        <Link to={createPageUrl("Übersicht")}>
                           <FileText className="mr-2 h-4 w-4" />
                           Dashboard
                         </Link>
@@ -277,7 +277,7 @@ export default function Layout({ children, currentPageName }) {
                   </div>
                 </div>
                 <p className="text-gray-400 text-sm mb-4">
-                  Build professional, ATS-optimized resumes with AI assistance and stunning templates.
+                  Erstelle professionelle, ATS-optimierte Lebensläufe mit KI-Unterstützung und modernen Vorlagen.
                 </p>
                 <p className="text-green-400 text-sm font-medium">
                   🇮🇳 Made in Jhansi, Uttar Pradesh, India
@@ -285,29 +285,29 @@ export default function Layout({ children, currentPageName }) {
               </div>
               
               <div>
-                <h4 className="font-semibold mb-4">Product</h4>
+                <h4 className="font-semibold mb-4">Produkt</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link to={createPageUrl("Templates")} className="hover:text-green-400 transition-colors">Resume Templates</Link></li>
-                  <li><Link to={createPageUrl("Jobs")} className="hover:text-green-400 transition-colors">Job Board</Link></li>
-                  <li><Link to={createPageUrl("JobMatcher")} className="hover:text-green-400 transition-colors">Job Matcher</Link></li>
-                    <li><Link to={createPageUrl("ATSChecker")} className="hover:text-green-400 transition-colors">ATS Resume Checker</Link></li>
-                    <li><Link to={createPageUrl("CoverLetter")} className="hover:text-green-400 transition-colors">Cover Letter Generator</Link></li>
-                  <li><Link to={createPageUrl("News")} className="hover:text-green-400 transition-colors">Career News</Link></li>
+                  <li><Link to={createPageUrl("Vorlagen")} className="hover:text-green-400 transition-colors">Lebenslauf-Vorlagen</Link></li>
+                  <li><Link to={createPageUrl("Jobs")} className="hover:text-green-400 transition-colors">Stellen</Link></li>
+                  <li><Link to={createPageUrl("JobMatcher")} className="hover:text-green-400 transition-colors">Job-Abgleich</Link></li>
+                    <li><Link to={createPageUrl("ATSChecker")} className="hover:text-green-400 transition-colors">ATS-Prüfung</Link></li>
+                    <li><Link to={createPageUrl("CoverLetter")} className="hover:text-green-400 transition-colors">Anschreiben-Generator</Link></li>
+                  <li><Link to={createPageUrl("News")} className="hover:text-green-400 transition-colors">Karriere-News</Link></li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="font-semibold mb-4">Company</h4>
+                <h4 className="font-semibold mb-4">Unternehmen</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link to={createPageUrl("About")} className="hover:text-green-400 transition-colors">About Us</Link></li>
-                  <li><Link to={createPageUrl("Contact")} className="hover:text-green-400 transition-colors">Contact</Link></li>
+                  <li><Link to={createPageUrl("About")} className="hover:text-green-400 transition-colors">Über uns</Link></li>
+                  <li><Link to={createPageUrl("Kontakt")} className="hover:text-green-400 transition-colors">Kontakt</Link></li>
                   <li><Link to={createPageUrl("Datenschutz")} className="hover:text-green-400 transition-colors">Datenschutz / Privacy</Link></li>
-                  <li><a href="#" className="hover:text-green-400 transition-colors">Terms of Service</a></li>
+                  <li><a href="#" className="hover:text-green-400 transition-colors">AGB</a></li>
                 </ul>
               </div>
               
               <div>
-                <h4 className="font-semibold mb-4">Connect</h4>
+                <h4 className="font-semibold mb-4">Kontakt</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li><a href="https://twitter.com/resumeai" className="hover:text-green-400 transition-colors">🐦 Twitter</a></li>
                   <li><a href="https://linkedin.com/company/resumeai" className="hover:text-green-400 transition-colors">💼 LinkedIn</a></li>
@@ -318,7 +318,7 @@ export default function Layout({ children, currentPageName }) {
             </div>
             
             <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm">© 2024 ResumeAI. All rights reserved.</p>
+              <p className="text-gray-400 text-sm">© 2024 ResumeAI. Alle Rechte vorbehalten.</p>
               <p className="text-gray-400 text-sm flex items-center gap-1">
                 Built by <Heart className="w-4 h-4 text-red-500" /> 
                 <span className="text-green-400 font-medium">Sudhanshu Yadav</span> & 
@@ -336,7 +336,7 @@ export default function Layout({ children, currentPageName }) {
       <div className="flex min-h-screen w-full bg-[#070b09]">
         <Sidebar className="border-r border-white/[0.06] bg-[#0a110e]/95 backdrop-blur-xl">
           <SidebarHeader className="border-b border-white/[0.06] p-5">
-            <Link to={createPageUrl("Home")} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Link to={createPageUrl("Start")} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
                 <FileText className="w-6 h-6 text-white" />
               </div>
@@ -430,12 +430,12 @@ export default function Layout({ children, currentPageName }) {
                   <div className="px-3 py-2 space-y-2">
                     <div className="flex items-center gap-2 rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2 text-sm">
                       <FileText className="h-4 w-4 text-emerald-400" />
-                      <span className="text-white/55">Resumes</span>
+                      <span className="text-white/55">Lebensläufe</span>
                       <span className="ml-auto font-semibold text-white">3</span>
                     </div>
                     <div className="flex items-center gap-2 rounded-lg border border-white/[0.06] bg-white/[0.02] px-3 py-2 text-sm">
                       <Target className="h-4 w-4 text-sky-400" />
-                      <span className="text-white/55">Avg ATS Score</span>
+                      <span className="text-white/55">Ø ATS-Wert</span>
                       <span className="ml-auto font-semibold text-emerald-300">94%</span>
                     </div>
                   </div>
@@ -501,7 +501,7 @@ export default function Layout({ children, currentPageName }) {
           <header className="border-b border-white/[0.06] bg-[#070b09]/85 px-5 py-4 backdrop-blur-xl md:hidden">
             <div className="flex items-center gap-4">
               <SidebarTrigger className="rounded-xl p-2 text-white/70 transition-colors duration-300 hover:bg-white/[0.06] hover:text-white" />
-              <Link to={createPageUrl("Home")} className="flex items-center gap-2">
+              <Link to={createPageUrl("Start")} className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-lg flex items-center justify-center">
                   <FileText className="w-5 h-5 text-white" />
                 </div>

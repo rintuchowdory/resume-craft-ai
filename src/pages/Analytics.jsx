@@ -130,7 +130,7 @@ export default function Analytics() {
             <CardContent className="p-6">
               <div className="flex items-center justify-between">
                 <div>
-                  <p className="text-blue-600 text-sm font-medium">Avg ATS Score</p>
+                  <p className="text-blue-600 text-sm font-medium">Ø ATS-Wert</p>
                   <p className="text-2xl font-bold text-gray-900">{avgATSScore}%</p>
                 </div>
                 <Target className="w-8 h-8 text-blue-600" />

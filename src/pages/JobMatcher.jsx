@@ -100,7 +100,7 @@ export default function JobMatcher() {
       >
         <div className="flex items-center gap-3 mb-4">
           <Target className="w-8 h-8 text-purple-600" />
-          <h1 className="text-3xl font-bold text-gray-900">Job Matcher</h1>
+          <h1 className="text-3xl font-bold text-gray-900">Job-Abgleich</h1>
         </div>
         <p className="text-gray-600 text-lg">
           Analyze how well your resume matches specific job descriptions and get personalized improvement suggestions.

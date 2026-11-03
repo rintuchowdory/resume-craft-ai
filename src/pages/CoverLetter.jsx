@@ -108,10 +108,10 @@ export default function CoverLetter() {
               <Input placeholder="Your name" value={form.name} onChange={set("name")} />
               <Input placeholder="Role you're applying for *" value={form.role} onChange={set("role")} />
             </div>
-            <Input placeholder="Company" value={form.company} onChange={set("company")} />
+            <Input placeholder="Unternehmen" value={form.company} onChange={set("company")} />
             <div className="grid grid-cols-2 gap-3">
               <Input placeholder="Email" value={form.email} onChange={set("email")} />
-              <Input placeholder="Phone" value={form.phone} onChange={set("phone")} />
+              <Input placeholder="Telefon" value={form.phone} onChange={set("phone")} />
             </div>
             <Input placeholder="Your field / background (e.g. IT security)" value={form.field} onChange={set("field")} />
             <Textarea placeholder="Key skills, comma separated * (e.g. Python, SQL, incident response)" value={form.skills} onChange={set("skills")} className="min-h-[70px]" />
@@ -122,7 +122,7 @@ export default function CoverLetter() {
               <Select value={tone} onValueChange={setTone}>
                 <SelectTrigger><SelectValue /></SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="professional">Professional</SelectItem>
+                  <SelectItem value="professional">Professionell</SelectItem>
                   <SelectItem value="enthusiastic">Enthusiastic</SelectItem>
                   <SelectItem value="concise">Concise</SelectItem>
                 </SelectContent>

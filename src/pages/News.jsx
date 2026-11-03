@@ -63,7 +63,7 @@ export default function News() {
     { id: "Salary Insights", label: "Salaries", icon: Users },
     { id: "Remote Work", label: "Remote", icon: Clock },
     { id: "AI Impact", label: "AI Impact", icon: TrendingUp },
-    { id: "Skill Development", label: "Skills", icon: Users }
+    { id: "Skill Development", label: "Kenntnisse", icon: Users }
   ];
 
   const getCategoryColor = (category) => {

@@ -159,15 +159,15 @@ export default function Dashboard() {
       experienceEntries,
       readiness: [
         {
-          label: "Summary written",
+          label: "Kurzprofil geschrieben",
           value: count ? Math.round((withSummary / count) * 100) : 0,
         },
         {
-          label: "Skills added",
+          label: "Kenntnisse hinzugefügt",
           value: count ? Math.round((withSkills / count) * 100) : 0,
         },
         {
-          label: "Experience listed",
+          label: "Erfahrung eingetragen",
           value: count ? Math.round((withExperience / count) * 100) : 0,
         },
         { label: "Average ATS score", value: avg },
@@ -208,7 +208,7 @@ export default function Dashboard() {
               Your resumes
             </h1>
             <p className="mt-2 text-sm text-white/55">
-              Create and manage your AI-powered resumes.
+              Erstelle und verwalte deine Lebensläufe.
             </p>
           </div>
           <Button
@@ -226,7 +226,7 @@ export default function Dashboard() {
           <StatCard
             label="Total resumes"
             value={stats.count}
-            hint="Across all templates"
+            hint="Über alle Vorlagen"
             icon={FileText}
             tint="from-emerald-500/20 to-teal-500/10 text-emerald-300 border-emerald-400/25"
             delay={0.05}
@@ -234,7 +234,7 @@ export default function Dashboard() {
           <StatCard
             label="Avg ATS score"
             value={`${stats.avg}%`}
-            hint="Across your saved resumes"
+            hint="Über deine gespeicherten Lebensläufe"
             icon={Target}
             tint="from-sky-500/20 to-cyan-500/10 text-sky-300 border-sky-400/25"
             delay={0.1}
@@ -242,7 +242,7 @@ export default function Dashboard() {
           <StatCard
             label="Best score"
             value={`${stats.best}%`}
-            hint="Highest ATS score so far"
+            hint="Höchster erreichter ATS-Wert"
             icon={TrendingUp}
             tint="from-amber-500/20 to-orange-500/10 text-amber-300 border-amber-400/25"
             delay={0.15}
@@ -250,7 +250,7 @@ export default function Dashboard() {
           <StatCard
             label="Experience entries"
             value={stats.experienceEntries}
-            hint="Roles listed across resumes"
+            hint="Positionen in allen Lebensläufen"
             icon={Sparkles}
             tint="from-fuchsia-500/20 to-purple-500/10 text-fuchsia-300 border-fuchsia-400/25"
             delay={0.2}

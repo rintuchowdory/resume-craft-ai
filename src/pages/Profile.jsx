@@ -149,7 +149,7 @@ export default function Profile() {
         {/* Personal Information */}
         <Card className="bg-white/80 backdrop-blur-sm border border-gray-200">
           <CardHeader>
-            <CardTitle>Personal Information</CardTitle>
+            <CardTitle>Persönliche Daten</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid md:grid-cols-2 gap-4">
@@ -190,7 +190,7 @@ export default function Profile() {
                 </div>
               </div>
               <div>
-                <Label htmlFor="location">Location</Label>
+                <Label htmlFor="location">Ort</Label>
                 <div className="relative">
                   <MapPin className="absolute left-3 top-3 h-4 w-4 text-gray-400" />
                   <Input

@@ -123,13 +123,13 @@ const BENEFITS = [
   },
   {
     icon: Target,
-    title: "ATS Optimized",
+    title: "ATS-optimiert",
     desc: "Beat 99% of applicant tracking systems with our optimization",
     tint: "from-emerald-500/20 to-teal-500/10 text-emerald-300 border-emerald-400/25",
   },
   {
     icon: Download,
-    title: "Multiple Formats",
+    title: "Mehrere Formate",
     desc: "Export to PDF, DOCX, and shareable links instantly",
     tint: "from-sky-500/20 to-cyan-500/10 text-sky-300 border-sky-400/25",
   },
@@ -156,7 +156,7 @@ const STEPS = [
   },
   {
     step: "03",
-    title: "Live Preview",
+    title: "Live-Vorschau",
     desc: "See your resume update in real-time as you edit",
     icon: Eye,
   },
@@ -287,7 +287,7 @@ export default function Home() {
               </div>
 
               <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
-                <Link to={createPageUrl("Templates")}>
+                <Link to={createPageUrl("Vorlagen")}>
                   <Button
                     size="lg"
                     className="group w-full rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 px-7 py-6 text-base font-semibold text-[#04120c] shadow-lg shadow-emerald-500/20 transition hover:from-emerald-300 hover:to-teal-400 sm:w-auto"
@@ -531,7 +531,7 @@ export default function Home() {
               jobs using ResumeAI. Start building your winning resume today.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
-              <Link to={createPageUrl("Templates")}>
+              <Link to={createPageUrl("Vorlagen")}>
                 <Button
                   size="lg"
                   className="w-full rounded-xl bg-gradient-to-r from-emerald-400 to-teal-500 px-7 py-6 text-base font-semibold text-[#04120c] shadow-lg shadow-emerald-500/20 transition hover:from-emerald-300 hover:to-teal-400 sm:w-auto"

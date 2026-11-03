@@ -95,7 +95,7 @@ export default function PDFTools() {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
             <FileText className="w-6 h-6 text-green-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">PDF Tools</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">PDF-Werkzeuge</h1>
           </div>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
             Optimize your resume PDF size for job applications and email attachments

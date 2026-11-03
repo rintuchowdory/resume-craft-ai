@@ -11,91 +11,91 @@ import { createPageHref, createPageUrl } from "@/utils";
 const templates = [
   {
     id: "modern",
-    name: "Modern Professional",
-    description: "Clean, contemporary design with subtle colors and clear typography",
+    name: "Modern Professionell",
+    description: "Klares, modernes Design mit dezenten Farben und guter Lesbarkeit",
     accent: "#10B981",
     bgColor: "#F0FDF4",
-    features: ["ATS Optimized", "Clean Layout", "Professional"],
+    features: ["ATS-optimiert", "Klares Layout", "Professionell"],
     category: "professional",
     popular: true,
   },
   {
     id: "creative", 
-    name: "Creative Portfolio",
-    description: "Vibrant design perfect for creative professionals and designers",
+    name: "Kreatives Portfolio",
+    description: "Ausdrucksstarkes Design für Kreative und Designer",
     accent: "#F59E0B",
     bgColor: "#FFFBEB",
-    features: ["Eye-catching", "Creative", "Portfolio Focus"],
+    features: ["Auffällig", "Kreativ", "Portfolio-Fokus"],
     category: "creative",
     popular: false,
   },
   {
     id: "executive",
-    name: "Executive Professional", 
-    description: "Traditional, formal design ideal for senior positions",
+    name: "Führungskraft", 
+    description: "Klassisches, formelles Design für gehobene Positionen",
     accent: "#3B82F6",
     bgColor: "#EFF6FF",
-    features: ["Traditional", "Formal", "Executive"],
+    features: ["Traditionell", "Formell", "Führungskraft"],
     category: "executive",
     popular: false,
   },
   {
     id: "minimal",
-    name: "Minimal Clean",
-    description: "Ultra-clean design focusing on content with maximum readability",
+    name: "Minimal Klar",
+    description: "Maximal aufgeräumtes Design mit Fokus auf Lesbarkeit",
     accent: "#6B7280",
     bgColor: "#F9FAFB",
-    features: ["Minimal", "Clean", "Readable"],
+    features: ["Minimal", "Klar", "Lesbar"],
     category: "minimal",
     popular: false,
   },
   {
     id: "tech",
-    name: "Tech Innovator",
-    description: "Modern tech-focused design with coding elements and dark theme",
+    name: "Tech-Innovator",
+    description: "Technisches Design mit Code-Elementen und dunklem Theme",
     accent: "#8B5CF6",
     bgColor: "#F5F3FF",
-    features: ["Tech Style", "Dark Theme", "Code Elements"],
+    features: ["Technik-Stil", "Dunkles Theme", "Code-Elemente"],
     category: "tech",
     popular: true,
   },
   {
     id: "startup",
-    name: "Startup Founder",
-    description: "Bold entrepreneurial design for startup founders and innovators",
+    name: "Startup-Gründer",
+    description: "Mutiges Design für Gründer und Innovatoren",
     accent: "#EF4444",
     bgColor: "#FEF2F2",
-    features: ["Bold", "Entrepreneurial", "Modern"],
+    features: ["Bold", "Unternehmerisch", "Modern"],
     category: "startup",
     popular: false,
   },
   {
     id: "healthcare",
-    name: "Healthcare Pro",
-    description: "Clean medical professional design with trust-building elements",
+    name: "Gesundheitswesen",
+    description: "Klares medizinisches Design mit Vertrauen schaffenden Elementen",
     accent: "#06B6D4",
     bgColor: "#ECFEFF",
-    features: ["Medical", "Trust-building", "Professional"],
+    features: ["Medical", "Trust-building", "Professionell"],
     category: "healthcare",
     popular: false,
   },
   {
     id: "academic",
-    name: "Academic Scholar",
+    name: "Wissenschaft",
     description: "Scholarly design perfect for researchers and academics",
     accent: "#7C3AED",
     bgColor: "#FAF5FF",
-    features: ["Academic", "Research Focus", "Publications"],
+    features: ["Academic", "Forschungsfokus", "Publikationen"],
     category: "academic",
     popular: false,
   }
 ];
 
 const categories = [
-  { id: "all", label: "All Templates", icon: Sparkles },
-  { id: "professional", label: "Professional", icon: Zap },
-  { id: "creative", label: "Creative", icon: Palette },
-  { id: "tech", label: "Technology", icon: Star }
+  { id: "all", label: "Alle Vorlagen", icon: Sparkles },
+  { id: "professional", label: "Professionell", icon: Zap },
+  { id: "creative", label: "Kreativ", icon: Palette },
+  { id: "tech", label: "Technik", icon: Star }
 ];
 
 export default function Templates() {
@@ -142,10 +142,10 @@ export default function Templates() {
         >
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2 mb-4">
             <Sparkles className="w-6 h-6 text-purple-600" />
-            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">Resume Templates</h1>
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900">Lebenslauf-Vorlagen</h1>
           </div>
           <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto px-4">
-            Choose from our collection of professionally designed, ATS-optimized resume templates
+            Wähle aus professionell gestalteten, ATS-optimierten Lebenslauf-Vorlagen
           </p>
         </motion.div>
 
@@ -267,7 +267,7 @@ export default function Templates() {
           transition={{ delay: 0.6 }}
           className="mt-12 sm:mt-16"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">Professional Tools</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">Profi-Werkzeuge</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <Link to={createPageUrl("PhotoEditor")}>
               <Card className="hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-blue-200 group cursor-pointer">
@@ -275,8 +275,8 @@ export default function Templates() {
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-xl mx-auto mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">Photo Editor</h3>
-                  <p className="text-gray-600 text-xs sm:text-sm">Make your profile photo professional with AI enhancement</p>
+                  <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">Foto-Editor</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm">Mach dein Bewerbungsfoto mit KI professionell</p>
                 </CardContent>
               </Card>
             </Link>
@@ -287,20 +287,20 @@ export default function Templates() {
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-xl mx-auto mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Download className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">PDF Tools</h3>
-                  <p className="text-gray-600 text-xs sm:text-sm">Resize and optimize your resume PDFs for applications</p>
+                  <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">PDF-Werkzeuge</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm">Verkleinere und optimiere deine Lebenslauf-PDFs</p>
                 </CardContent>
               </Card>
             </Link>
 
-            <Link to={createPageUrl("Dashboard")} className="sm:col-span-2 lg:col-span-1">
+            <Link to={createPageUrl("Übersicht")} className="sm:col-span-2 lg:col-span-1">
               <Card className="hover:shadow-lg transition-all duration-300 border border-gray-200 hover:border-orange-200 group cursor-pointer">
                 <CardContent className="p-4 sm:p-6 text-center">
                   <div className="w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl mx-auto mb-3 sm:mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">AI Assistant</h3>
-                  <p className="text-gray-600 text-xs sm:text-sm">Get AI suggestions to improve your resume content</p>
+                  <h3 className="font-bold text-gray-900 mb-2 text-sm sm:text-base">KI-Assistent</h3>
+                  <p className="text-gray-600 text-xs sm:text-sm">Erhalte KI-Vorschläge für bessere Inhalte</p>
                 </CardContent>
               </Card>
             </Link>
@@ -314,13 +314,13 @@ export default function Templates() {
           transition={{ delay: 0.8 }}
           className="mt-12 sm:mt-16 text-center"
         >
-          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Why Our Templates?</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Warum unsere Vorlagen?</h2>
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8">
             {[
-              { title: "ATS Optimized", desc: "Pass applicant tracking systems", icon: "🎯" },
-              { title: "Professional Design", desc: "Crafted by design experts", icon: "✨" },
-              { title: "Easy Customization", desc: "Modify colors, fonts, and layout", icon: "🎨" },
-              { title: "Multiple Formats", desc: "Export to PDF, DOCX, and more", icon: "📄" }
+              { title: "ATS-optimiert", desc: "Besteht Bewerbermanagementsysteme", icon: "🎯" },
+              { title: "Professionelles Design", desc: "Von Designprofis erstellt", icon: "✨" },
+              { title: "Einfach anpassbar", desc: "Farben, Schriften und Layout ändern", icon: "🎨" },
+              { title: "Mehrere Formate", desc: "Export als PDF, DOCX und mehr", icon: "📄" }
             ].map((feature, index) => (
               <motion.div
                 key={index}

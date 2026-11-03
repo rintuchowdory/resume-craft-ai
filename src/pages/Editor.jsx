@@ -157,8 +157,8 @@ Provide only a numeric score between 0-100.`,
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
-          <p className="text-xl text-gray-600 mb-4">Resume not found</p>
-          <Button onClick={() => window.history.back()}>Go Back</Button>
+          <p className="text-xl text-gray-600 mb-4">Lebenslauf nicht gefunden</p>
+          <Button onClick={() => window.history.back()}>Zurück</Button>
         </div>
       </div>
     );
@@ -244,11 +244,11 @@ Provide only a numeric score between 0-100.`,
         <div className="lg:col-span-2 space-y-6">
           <Tabs value={activeSection} onValueChange={setActiveSection} className="w-full">
             <TabsList className="grid w-full grid-cols-5 bg-white/80 backdrop-blur-sm">
-              <TabsTrigger value="personal">Personal</TabsTrigger>
-              <TabsTrigger value="experience">Experience</TabsTrigger>
-              <TabsTrigger value="education">Education</TabsTrigger>
-              <TabsTrigger value="skills">Skills</TabsTrigger>
-              <TabsTrigger value="projects">Projects</TabsTrigger>
+              <TabsTrigger value="personal">Person</TabsTrigger>
+              <TabsTrigger value="experience">Berufserfahrung</TabsTrigger>
+              <TabsTrigger value="education">Ausbildung</TabsTrigger>
+              <TabsTrigger value="skills">Kenntnisse</TabsTrigger>
+              <TabsTrigger value="projects">Projekte</TabsTrigger>
             </TabsList>
             
             <TabsContent value="personal">

@@ -66,14 +66,14 @@ const sampleData = {
 };
 
 const templates = {
-    modern: { name: "Modern Professional", accent: "#87D68D", bgColor: "#F7FFF6" },
-    creative: { name: "Creative Portfolio", accent: "#FF6B6B", bgColor: "#FFF5F5" },
-    executive: { name: "Executive Professional", accent: "#4A90E2", bgColor: "#F0F8FF" },
-    minimal: { name: "Minimal Clean", accent: "#6B7280", bgColor: "#FAFAFA" },
-    tech: { name: "Tech Innovator", accent: "#8B5CF6", bgColor: "#F5F3FF" },
-    startup: { name: "Startup Founder", accent: "#EF4444", bgColor: "#FEF2F2" },
-    healthcare: { name: "Healthcare Pro", accent: "#06B6D4", bgColor: "#ECFEFF" },
-    academic: { name: "Academic Scholar", accent: "#7C3AED", bgColor: "#FAF5FF" }
+    modern: { name: "Modern Professionell", accent: "#87D68D", bgColor: "#F7FFF6" },
+    creative: { name: "Kreatives Portfolio", accent: "#FF6B6B", bgColor: "#FFF5F5" },
+    executive: { name: "Führungskraft", accent: "#4A90E2", bgColor: "#F0F8FF" },
+    minimal: { name: "Minimal Klar", accent: "#6B7280", bgColor: "#FAFAFA" },
+    tech: { name: "Tech-Innovator", accent: "#8B5CF6", bgColor: "#F5F3FF" },
+    startup: { name: "Startup-Gründer", accent: "#EF4444", bgColor: "#FEF2F2" },
+    healthcare: { name: "Gesundheitswesen", accent: "#06B6D4", bgColor: "#ECFEFF" },
+    academic: { name: "Wissenschaft", accent: "#7C3AED", bgColor: "#FAF5FF" }
   };
 
 export default function TemplatePreview() {
@@ -112,7 +112,7 @@ export default function TemplatePreview() {
       <div className="max-w-7xl mx-auto p-4 sm:p-6">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-6 sm:mb-8">
           <div className="flex items-center gap-4 mb-4 sm:mb-0">
-            <Link to={createPageUrl("Templates")}>
+            <Link to={createPageUrl("Vorlagen")}>
               <Button variant="outline" size="sm">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back

@@ -142,7 +142,7 @@ export default function Jobs() {
           
           <Select value={locationFilter} onValueChange={setLocationFilter}>
             <SelectTrigger>
-              <SelectValue placeholder="Location" />
+              <SelectValue placeholder="Ort" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Locations</SelectItem>
@@ -168,14 +168,14 @@ export default function Jobs() {
 
           <Select value={levelFilter} onValueChange={setLevelFilter}>
             <SelectTrigger>
-              <SelectValue placeholder="Experience" />
+              <SelectValue placeholder="Berufserfahrung" />
             </SelectTrigger>
             <SelectContent>
               <SelectItem value="all">All Levels</SelectItem>
               <SelectItem value="entry">Entry Level</SelectItem>
               <SelectItem value="mid">Mid Level</SelectItem>
               <SelectItem value="senior">Senior</SelectItem>
-              <SelectItem value="executive">Executive</SelectItem>
+              <SelectItem value="executive">Führungskraft</SelectItem>
             </SelectContent>
           </Select>
 

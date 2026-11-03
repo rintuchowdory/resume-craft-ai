@@ -39,7 +39,7 @@ export default function Datenschutz() {
     <div className="min-h-screen bg-[#070b09] pb-24 pt-24 text-white">
       <div className="mx-auto max-w-4xl px-6">
         <Link
-          to={createPageUrl("Home")}
+          to={createPageUrl("Start")}
           className="mb-6 inline-flex items-center gap-2 text-sm text-white/50 transition-colors hover:text-emerald-300"
         >
           <ArrowLeft className="h-4 w-4" /> Zurück zur Startseite

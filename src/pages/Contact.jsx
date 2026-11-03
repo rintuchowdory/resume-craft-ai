@@ -131,7 +131,7 @@ ${formData.message}
                     <Phone className="w-5 h-5 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-gray-900">Phone</h4>
+                    <h4 className="font-medium text-gray-900">Telefon</h4>
                     <p className="text-gray-600">+91 98765 43210</p>
                     <p className="text-sm text-gray-500">Mon-Sat, 10AM-7PM IST</p>
                   </div>
@@ -215,7 +215,7 @@ ${formData.message}
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
-                      <Label htmlFor="name">Full Name *</Label>
+                      <Label htmlFor="name">Vollständiger Name *</Label>
                       <Input
                         id="name"
                         value={formData.name}
