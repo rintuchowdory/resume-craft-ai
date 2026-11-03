@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 import { createPageHref, createPageUrl } from "@/utils";
 import { motion } from "framer-motion";
 import { format } from "date-fns";
+import { de } from "date-fns/locale";
 import {
   Bar,
   BarChart,
@@ -468,7 +469,7 @@ export default function Dashboard() {
                   <p className="mt-4 text-[11px] uppercase tracking-wide text-white/35">
                     Aktualisiert{" "}
                     {resume.updated_date
-                      ? format(new Date(resume.updated_date), "MMM d, yyyy")
+                      ? format(new Date(resume.updated_date), "d. MMM yyyy", { locale: de })
                       : "—"}
                   </p>
 
