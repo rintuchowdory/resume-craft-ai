@@ -63,18 +63,18 @@ const CustomAvatar = ({ src, alt, fallback, className, fallbackClassName }) => {
 const navigationItems = [
   {
     title: "Start",
-    url: createPageUrl("Start"),
+    url: createPageUrl("Home"),
     icon: Home,
   },
   {
     title: "Übersicht",
-    url: createPageUrl("Übersicht"),
+    url: createPageUrl("Dashboard"),
     icon: FileText,
     requiresAuth: true,
   },
   {
     title: "Vorlagen",
-    url: createPageUrl("Vorlagen"),
+    url: createPageUrl("Templates"),
     icon: Sparkles,
   },
   {
@@ -90,7 +90,7 @@ const navigationItems = [
   },
   {
     title: "Statistik", 
-    url: createPageUrl("Statistik"),
+    url: createPageUrl("Analytics"),
     icon: TrendingUp,
     requiresAuth: true,
   },
@@ -109,7 +109,7 @@ const secondaryItems = [
   },
   {
     title: "Kontakt",
-    url: createPageUrl("Kontakt"),
+    url: createPageUrl("Contact"),
     icon: Mail,
   },
 ];
@@ -173,7 +173,7 @@ export default function Layout({ children, currentPageName }) {
           <div className="max-w-7xl mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               {/* Logo */}
-              <Link to={createPageUrl("Start")} className="flex items-center gap-3">
+              <Link to={createPageUrl("Home")} className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
                   <FileText className="w-6 h-6 text-white" />
                 </div>
@@ -185,13 +185,13 @@ export default function Layout({ children, currentPageName }) {
 
               {/* Navigation Links */}
               <div className="hidden md:flex items-center space-x-8">
-                <Link to={createPageUrl("Vorlagen")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Vorlagen</Link>
+                <Link to={createPageUrl("Templates")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Vorlagen</Link>
                 <Link to={createPageUrl("ATSChecker")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">ATS Checker</Link>
                 <Link to={createPageUrl("CoverLetter")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Cover Letter</Link>
                 <Link to={createPageUrl("Jobs")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Jobs</Link>
                 <Link to={createPageUrl("News")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">News</Link>
                 <Link to={createPageUrl("About")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">About</Link>
-                <Link to={createPageUrl("Kontakt")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Kontakt</Link>
+                <Link to={createPageUrl("Contact")} className="text-sm text-white/60 transition-colors hover:text-emerald-300">Kontakt</Link>
               </div>
 
               {/* Auth Buttons */}
@@ -217,7 +217,7 @@ export default function Layout({ children, currentPageName }) {
                       </DropdownMenuLabel>
                       <DropdownMenuSeparator />
                       <DropdownMenuItem asChild>
-                        <Link to={createPageUrl("Übersicht")}>
+                        <Link to={createPageUrl("Dashboard")}>
                           <FileText className="mr-2 h-4 w-4" />
                           Dashboard
                         </Link>
@@ -287,7 +287,7 @@ export default function Layout({ children, currentPageName }) {
               <div>
                 <h4 className="font-semibold mb-4">Produkt</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
-                  <li><Link to={createPageUrl("Vorlagen")} className="hover:text-green-400 transition-colors">Lebenslauf-Vorlagen</Link></li>
+                  <li><Link to={createPageUrl("Templates")} className="hover:text-green-400 transition-colors">Lebenslauf-Vorlagen</Link></li>
                   <li><Link to={createPageUrl("Jobs")} className="hover:text-green-400 transition-colors">Stellen</Link></li>
                   <li><Link to={createPageUrl("JobMatcher")} className="hover:text-green-400 transition-colors">Job-Abgleich</Link></li>
                     <li><Link to={createPageUrl("ATSChecker")} className="hover:text-green-400 transition-colors">ATS-Prüfung</Link></li>
@@ -300,7 +300,7 @@ export default function Layout({ children, currentPageName }) {
                 <h4 className="font-semibold mb-4">Unternehmen</h4>
                 <ul className="space-y-2 text-sm text-gray-400">
                   <li><Link to={createPageUrl("About")} className="hover:text-green-400 transition-colors">Über uns</Link></li>
-                  <li><Link to={createPageUrl("Kontakt")} className="hover:text-green-400 transition-colors">Kontakt</Link></li>
+                  <li><Link to={createPageUrl("Contact")} className="hover:text-green-400 transition-colors">Kontakt</Link></li>
                   <li><Link to={createPageUrl("Datenschutz")} className="hover:text-green-400 transition-colors">Datenschutz / Privacy</Link></li>
                   <li><a href="#" className="hover:text-green-400 transition-colors">AGB</a></li>
                 </ul>
@@ -336,7 +336,7 @@ export default function Layout({ children, currentPageName }) {
       <div className="flex min-h-screen w-full bg-[#070b09]">
         <Sidebar className="border-r border-white/[0.06] bg-[#0a110e]/95 backdrop-blur-xl">
           <SidebarHeader className="border-b border-white/[0.06] p-5">
-            <Link to={createPageUrl("Start")} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+            <Link to={createPageUrl("Home")} className="flex items-center gap-3 hover:opacity-80 transition-opacity">
               <div className="w-10 h-10 bg-gradient-to-r from-green-400 to-emerald-500 rounded-xl flex items-center justify-center shadow-lg">
                 <FileText className="w-6 h-6 text-white" />
               </div>
@@ -501,7 +501,7 @@ export default function Layout({ children, currentPageName }) {
           <header className="border-b border-white/[0.06] bg-[#070b09]/85 px-5 py-4 backdrop-blur-xl md:hidden">
             <div className="flex items-center gap-4">
               <SidebarTrigger className="rounded-xl p-2 text-white/70 transition-colors duration-300 hover:bg-white/[0.06] hover:text-white" />
-              <Link to={createPageUrl("Start")} className="flex items-center gap-2">
+              <Link to={createPageUrl("Home")} className="flex items-center gap-2">
                 <div className="w-8 h-8 bg-gradient-to-r from-green-400 to-emerald-500 rounded-lg flex items-center justify-center">
                   <FileText className="w-5 h-5 text-white" />
                 </div>
