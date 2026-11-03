@@ -91,7 +91,7 @@ ${formData.message}
               <h1 className="text-5xl font-bold text-gray-900">Kontakt aufnehmen</h1>
             </div>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              Have questions, feedback, or need support? We're here to help! 
+              Fragen, Feedback oder Support-Bedarf? Melde dich gern. 
               Schreib uns – wir antworten in der Regel innerhalb von 24 Stunden.
             </p>
           </motion.div>
@@ -122,7 +122,7 @@ ${formData.message}
                   <div>
                     <h4 className="font-medium text-gray-900">E-Mail</h4>
                     <p className="text-gray-600">support@resumeai.com</p>
-                    <p className="text-sm text-gray-500">We reply within 24 hours</p>
+                    <p className="text-sm text-gray-500">Antwort meist innerhalb von 24 Stunden</p>
                   </div>
                 </div>
 
@@ -133,7 +133,7 @@ ${formData.message}
                   <div>
                     <h4 className="font-medium text-gray-900">Telefon</h4>
                     <p className="text-gray-600">+91 98765 43210</p>
-                    <p className="text-sm text-gray-500">Mon-Sat, 10AM-7PM IST</p>
+                    <p className="text-sm text-gray-500">Mo–Sa, 10:00–19:00 Uhr</p>
                   </div>
                 </div>
 
@@ -154,8 +154,8 @@ ${formData.message}
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Support-Zeiten</h4>
-                    <p className="text-gray-600">Monday - Saturday</p>
-                    <p className="text-sm text-gray-500">10:00 AM - 7:00 PM IST</p>
+                    <p className="text-gray-600">Montag – Samstag</p>
+                    <p className="text-sm text-gray-500">10:00 – 19:00 Uhr</p>
                   </div>
                 </div>
               </CardContent>
@@ -166,7 +166,7 @@ ${formData.message}
               <CardContent className="p-6">
                 <h3 className="font-semibold text-green-800 mb-2">Schneller Support</h3>
                 <p className="text-green-700 text-sm mb-4">
-                  Need instant help? Connect with us on WhatsApp for real-time assistance.
+                  Schnelle Hilfe gefällig? Schreib uns auf WhatsApp.
                 </p>
                 <Button 
                   className="w-full bg-green-600 hover:bg-green-700 text-white"
@@ -242,11 +242,11 @@ ${formData.message}
                       <Label htmlFor="category">Kategorie</Label>
                       <Select value={formData.category} onValueChange={(value) => handleInputChange('category', value)}>
                         <SelectTrigger>
-                          <SelectValue placeholder="Select a category" />
+                          <SelectValue placeholder="Kategorie wählen" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="support">Technischer Support</SelectItem>
-                          <SelectItem value="billing">Billing Question</SelectItem>
+                          <SelectItem value="billing">Abrechnungsfrage</SelectItem>
                           <SelectItem value="feature">Funktionswunsch</SelectItem>
                           <SelectItem value="bug">Fehlermeldung</SelectItem>
                           <SelectItem value="partnership">Kooperation</SelectItem>
