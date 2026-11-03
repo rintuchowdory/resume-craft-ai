@@ -170,7 +170,7 @@ export default function Dashboard() {
           label: "Erfahrung eingetragen",
           value: count ? Math.round((withExperience / count) * 100) : 0,
         },
-        { label: "Average ATS score", value: avg },
+        { label: "Ø ATS-Wert", value: avg },
       ],
     };
   }, [resumes]);
@@ -224,7 +224,7 @@ export default function Dashboard() {
         {/* KPI tiles */}
         <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
           <StatCard
-            label="Total resumes"
+            label="Lebensläufe gesamt"
             value={stats.count}
             hint="Über alle Vorlagen"
             icon={FileText}
@@ -232,7 +232,7 @@ export default function Dashboard() {
             delay={0.05}
           />
           <StatCard
-            label="Avg ATS score"
+            label="Ø ATS-Wert"
             value={`${stats.avg}%`}
             hint="Über deine gespeicherten Lebensläufe"
             icon={Target}
@@ -240,7 +240,7 @@ export default function Dashboard() {
             delay={0.1}
           />
           <StatCard
-            label="Best score"
+            label="Bester Wert"
             value={`${stats.best}%`}
             hint="Höchster erreichter ATS-Wert"
             icon={TrendingUp}
@@ -248,7 +248,7 @@ export default function Dashboard() {
             delay={0.15}
           />
           <StatCard
-            label="Experience entries"
+            label="Stationen"
             value={stats.experienceEntries}
             hint="Positionen in allen Lebensläufen"
             icon={Sparkles}
@@ -271,8 +271,7 @@ export default function Dashboard() {
                   ATS-Wert je Lebenslauf
                 </h2>
                 <p className="text-xs text-white/45">
-                  Latest {chartData.length || 0} resume
-                  {chartData.length === 1 ? "" : "s"} by update date
+                  Neueste {chartData.length || 0} Lebensläufe nach Änderungsdatum
                 </p>
               </div>
               <Gauge className="h-4 w-4 text-white/35" />
@@ -355,7 +354,7 @@ export default function Dashboard() {
                   Profil-Vollständigkeit
                 </h2>
                 <p className="text-xs text-white/45">
-                  How complete your saved resumes are
+                  Wie vollständig deine Lebensläufe sind
                 </p>
               </div>
               <ArrowUpRight className="h-4 w-4 text-white/35" />
@@ -395,7 +394,7 @@ export default function Dashboard() {
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-sm font-semibold text-white">Alle Lebensläufe</h2>
             <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[11px] text-white/50">
-              {stats.count} total
+              {stats.count} gesamt
             </span>
           </div>
 
@@ -467,7 +466,7 @@ export default function Dashboard() {
                   </div>
 
                   <p className="mt-4 text-[11px] uppercase tracking-wide text-white/35">
-                    Updated{" "}
+                    Aktualisiert{" "}
                     {resume.updated_date
                       ? format(new Date(resume.updated_date), "MMM d, yyyy")
                       : "—"}
