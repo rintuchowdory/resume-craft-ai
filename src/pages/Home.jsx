@@ -130,13 +130,13 @@ const BENEFITS = [
   {
     icon: Download,
     title: "Mehrere Formate",
-    desc: "Export to PDF, DOCX, and shareable links instantly",
+    desc: "Export als PDF, DOCX und teilbarer Link — sofort",
     tint: "from-sky-500/20 to-cyan-500/10 text-sky-300 border-sky-400/25",
   },
   {
     icon: TrendingUp,
     title: "Echtzeit-Statistik",
-    desc: "Track performance and get improvement suggestions",
+    desc: "Verfolge Ergebnisse und erhalte Verbesserungsvorschläge",
     tint: "from-amber-500/20 to-orange-500/10 text-amber-300 border-amber-400/25",
   },
 ];
@@ -174,7 +174,7 @@ const TESTIMONIALS = [
     role: "Software Engineer",
     company: "Google",
     testimonial:
-      "ResumeAI helped me land my dream job at Google! The AI suggestions were spot-on and the ATS optimization really works.",
+      "ResumeAI hat mir den Job bei Google gebracht! Die KI-Vorschläge passten genau, und die ATS-Optimierung wirkt.",
     avatar:
       "https://images.unsplash.com/photo-1494790108755-2616b612b47c?w=100&h=100&fit=crop&crop=face",
   },
@@ -183,7 +183,7 @@ const TESTIMONIALS = [
     role: "Product Manager",
     company: "Meta",
     testimonial:
-      "From unemployed to PM at Meta in 3 weeks. The resume templates and job matching feature are game-changers!",
+      "In 3 Wochen von der Arbeitslosigkeit zum Produktmanager bei Meta. Vorlagen und Job-Abgleich sind entscheidend!",
     avatar:
       "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face",
   },
@@ -192,7 +192,7 @@ const TESTIMONIALS = [
     role: "Data Scientist",
     company: "Microsoft",
     testimonial:
-      "The AI-generated content saved me hours and helped me articulate my experience perfectly. Highly recommend!",
+      "Die KI-Inhalte haben mir Stunden gespart und meine Erfahrung perfekt formuliert. Klare Empfehlung!",
     avatar:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face",
   },
@@ -262,27 +262,26 @@ export default function Home() {
                 Finde deinen
                 <span className="text-gradient-mint"> Traumjob</span>
                 <br />
-                with AI Power
+                mit KI-Unterstützung
               </h1>
 
               <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/60 sm:text-lg lg:mx-0">
-                Create ATS-optimized resumes with AI-generated content,
-                real-time job matching, and professional templates. Join
+                Erstelle ATS-optimierte Lebensläufe mit KI-Inhalten, echtem Job-Abgleich und professionellen Vorlagen. Join
                 50,000+ successful job seekers.
               </p>
 
               <div className="mt-6 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm text-white/60 lg:justify-start">
                 <span className="inline-flex items-center gap-2">
                   <Users className="h-4 w-4 text-emerald-400" />
-                  50K+ Users
+                  50.000+ Nutzer
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <Award className="h-4 w-4 text-emerald-400" />
-                  94% Success Rate
+                  94 % Erfolgsquote
                 </span>
                 <span className="inline-flex items-center gap-2">
                   <Globe className="h-4 w-4 text-emerald-400" />
-                  Global Reach
+                  Weltweit verfügbar
                 </span>
               </div>
 
@@ -387,14 +386,13 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <Reveal className="mb-12 text-center">
             <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-400">
-              Why ResumeAI
+              Warum ResumeAI
             </p>
             <h2 className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
               Starke Funktionen, echter Vorteil
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-white/55">
-              Everything you need to go from blank page to interview-ready
-              application.
+              Alles, was du vom leeren Blatt bis zur fertigen Bewerbung brauchst.
             </p>
           </Reveal>
 
@@ -524,11 +522,10 @@ export default function Home() {
               Kostenlos starten
             </div>
             <h2 className="mt-5 text-3xl font-semibold tracking-tight text-white sm:text-5xl">
-              Ready to transform your career?
+              Bereit für den nächsten Schritt?
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/60">
-              Join 50,000+ professionals who've successfully landed their dream
-              jobs using ResumeAI. Start building your winning resume today.
+              Über 50.000 Menschen haben mit ResumeAI ihren Traumjob gefunden. Starte jetzt deinen Lebenslauf.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
               <Link to={createPageUrl("Templates")}>
