@@ -8,22 +8,13 @@ import { createPageUrl } from "@/utils";
 
 const teamMembers = [
   {
-    name: "Sudhanshu Yadav",
-    role: "Founder & CEO",
-    bio: "Visionary entrepreneur from Jhansi, U.P., India. Passionate about AI-driven career solutions and democratizing access to professional opportunities.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    name: "Rintu Chowdory", role: "Betrieb & Entwicklung", bio: "Betreibt ResumeAI aus Baesweiler in Nordrhein-Westfalen und baut Web-Apps mit React, KI und Automatisierung.", image: "https://api.dicebear.com/7.x/initials/svg?seed=Rintu%20Chowdory&backgroundColor=059669"
   },
   {
-    name: "Iinvo Techy Team", 
-    role: "Development Team",
-    bio: "Innovative tech team based in Jhansi, specializing in AI/ML solutions, modern web development, and user-centric design.",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&h=400&fit=crop&crop=faces"
+    name: "ResumeAI", role: "Das Projekt", bio: "Ein schlanker Lebenslauf-Editor ohne Konto: alle Daten bleiben im Browser, die Oberfläche ist deutsch, und die Vorlagen sind auf ATS-Systeme ausgelegt.", image: "https://api.dicebear.com/7.x/initials/svg?seed=ResumeAI&backgroundColor=0f766e"
   },
   {
-    name: "Product Team",
-    role: "Design & Strategy",
-    bio: "Creative minds focused on user experience, product strategy, and making resume building accessible to everyone.",
-    image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=400&h=400&fit=crop&crop=faces"
+    name: "Datenschutz", role: "Ohne Tracking", bio: "Keine Anmeldung, keine Cookies, keine Werbung. Deine Lebensläufe verlassen dein Gerät nicht, außer du nutzt eine KI-Funktion bewusst.", image: "https://api.dicebear.com/7.x/initials/svg?seed=DSGVO&backgroundColor=1d4ed8"
   }
 ];
 
@@ -31,7 +22,7 @@ const milestones = [
   {
     year: "2024",
     title: "ResumeAI Launch",
-    description: "Launched AI-powered resume builder from Jhansi, U.P., India"
+    description: "Start des deutschsprachigen Lebenslauf-Editors"
   },
   {
     year: "2024",
@@ -79,10 +70,9 @@ export default function About() {
             </p>
             
             <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-2xl p-6 mt-8">
-              <p className="text-lg font-semibold text-green-800 mb-2">Built with ❤️ in Jhansi, Uttar Pradesh, India</p>
+              <p className="text-lg font-semibold text-green-800 mb-2">Entwickelt in Baesweiler, Nordrhein-Westfalen</p>
               <p className="text-green-700">
-                Founded by <strong>Sudhanshu Yadav</strong> and developed by the talented <strong>Iinvo Techy</strong> team, 
-                ResumeAI represents the innovative spirit of Indian tech entrepreneurship.
+                Betrieben und entwickelt von <strong>Rintu Chowdory</strong>. ResumeAI ist ein unabhängiges Projekt: Bewerbungen sollen ohne Konto, ohne Kosten und ohne Datenabfluss funktionieren.
               </p>
             </div>
           </motion.div>
@@ -130,13 +120,10 @@ export default function About() {
                 before human recruiters ever saw their resumes.
               </p>
               <p>
-                In 2024, our founding team from <strong>Jhansi, Uttar Pradesh, India</strong> combined their expertise 
-                in AI, user experience, and recruitment to create a platform that not only helps create beautiful resumes 
-                but ensures they pass through ATS filters and catch recruiters' attention.
+                ResumeAI entstand aus eigener Erfahrung mit Bewerbungen in Deutschland: ein Editor, der ohne Anmeldung funktioniert, die Daten im Browser lässt und trotzdem ATS-taugliche Lebensläufe liefert.
               </p>
               <p>
-                Today, we're proud to have helped over 50,000 job seekers land interviews at top companies 
-                worldwide. But we're just getting started on our mission to democratize career opportunities.
+                ResumeAI bleibt bewusst schlank: keine Registrierung, keine Kosten, alle Daten auf deinem Gerät.
               </p>
             </div>
           </motion.div>
@@ -246,7 +233,7 @@ export default function About() {
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">Unser Team</h2>
             <p className="text-xl text-gray-600">
-              Passionate individuals from Jhansi working to transform career opportunities
+              Wer hinter ResumeAI steckt
             </p>
           </motion.div>
 

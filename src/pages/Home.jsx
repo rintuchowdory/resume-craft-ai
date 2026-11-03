@@ -221,10 +221,10 @@ export default function Home() {
               </span>
               <div className="min-w-0 flex-1">
                 <p className="text-sm font-semibold text-white">
-                  MEGA STUDENT SUMMIT 2024 — Register Now!
+                  MEGA STUDENT SUMMIT 2024 – jetzt anmelden
                 </p>
                 <p className="text-xs text-white/55">
-                  15th March • Free Entry • ₹10L+ Prizes
+                  15. März • Eintritt frei • Preise im Wert von ₹10 L+
                 </p>
               </div>
               <Link to={createPageUrl("StudentEventLanding")}>

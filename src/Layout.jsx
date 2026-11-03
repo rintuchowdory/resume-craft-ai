@@ -280,7 +280,7 @@ export default function Layout({ children, currentPageName }) {
                   Erstelle professionelle, ATS-optimierte Lebensläufe mit KI-Unterstützung und modernen Vorlagen.
                 </p>
                 <p className="text-green-400 text-sm font-medium">
-                  🇮🇳 Made in Jhansi, Uttar Pradesh, India
+                  🇩🇪 Entwickelt in Baesweiler, Nordrhein-Westfalen
                 </p>
               </div>
               
@@ -318,11 +318,9 @@ export default function Layout({ children, currentPageName }) {
             </div>
             
             <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm">© 2024 ResumeAI. Alle Rechte vorbehalten.</p>
+              <p className="text-gray-400 text-sm">© 2026 ResumeAI. Alle Rechte vorbehalten.</p>
               <p className="text-gray-400 text-sm flex items-center gap-1">
-                Built by <Heart className="w-4 h-4 text-red-500" /> 
-                <span className="text-green-400 font-medium">Sudhanshu Yadav</span> & 
-                <span className="text-green-400 font-medium">Team Iinvo Techy</span>
+                Mit <Heart className="w-4 h-4 text-red-500" /> entwickelt von{" "} <span className="text-green-400 font-medium">Rintu Chowdory</span>
               </p>
             </div>
           </div>

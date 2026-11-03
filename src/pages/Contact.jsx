@@ -92,7 +92,7 @@ ${formData.message}
             </div>
             <p className="text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
               Have questions, feedback, or need support? We're here to help! 
-              Reach out to our team in Jhansi, U.P., India and we'll get back to you as soon as possible.
+              Schreib uns – wir antworten in der Regel innerhalb von 24 Stunden.
             </p>
           </motion.div>
         </div>
@@ -143,8 +143,8 @@ ${formData.message}
                   </div>
                   <div>
                     <h4 className="font-medium text-gray-900">Büro</h4>
-                    <p className="text-gray-600">Jhansi, Uttar Pradesh, India</p>
-                    <p className="text-sm text-gray-500">Founded & operated from Jhansi</p>
+                    <p className="text-gray-600">52499 Baesweiler, Nordrhein-Westfalen</p>
+                    <p className="text-sm text-gray-500">Betrieben aus Baesweiler bei Aachen</p>
                   </div>
                 </div>
 
@@ -309,13 +309,13 @@ ${formData.message}
         >
           <Card className="bg-white/80 backdrop-blur-sm">
             <CardHeader>
-              <CardTitle className="text-center">Our Location - Jhansi, U.P., India</CardTitle>
-              <p className="text-center text-gray-600">Proudly building the future of resume creation from the historic city of Jhansi</p>
+              <CardTitle className="text-center">Unser Standort – Baesweiler bei Aachen</CardTitle>
+              <p className="text-center text-gray-600">ResumeAI entsteht in Baesweiler bei Aachen</p>
             </CardHeader>
             <CardContent className="p-0">
               <div className="w-full h-96 rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115681.6290465742!2d78.5129994!3d25.4484257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397776d458ba7bdd%3A0x96e9cda55c3481ca!2sJhansi%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1701234567890!5m2!1sen!2sin"
+                  src="https://maps.google.com/maps?q=Baesweiler%2C%20Deutschland&z=12&output=embed"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
