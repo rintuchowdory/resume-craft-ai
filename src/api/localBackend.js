@@ -319,7 +319,7 @@ const readProfile = () => {
 const localUser = () => ({
   id: LOCAL_USER_ID,
   email: "",
-  full_name: "Local Profile",
+  full_name: "Lokales Profil",
   role: "user",
   avatar: "",
   ...readProfile(),

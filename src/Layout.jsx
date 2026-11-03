@@ -354,14 +354,14 @@ export default function Layout({ children, currentPageName }) {
                 <h3 className="mb-2 text-sm font-semibold text-amber-200">Guest mode</h3>
                 <p className="mb-3 text-xs text-amber-200/70">You're browsing as a guest. Sign up for full features!</p>
                 <Button size="sm" onClick={handleLogin} className="w-full rounded-lg bg-gradient-to-r from-emerald-400 to-teal-500 font-semibold text-[#04120c]">
-                  Sign Up Free
+                  Kostenlos registrieren
                 </Button>
               </div>
             )}
 
             <SidebarGroup>
               <SidebarGroupLabel className="px-2 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
-                Main Features
+                Hauptfunktionen
               </SidebarGroupLabel>
               <SidebarGroupContent>
                 <SidebarMenu>
@@ -398,7 +398,7 @@ export default function Layout({ children, currentPageName }) {
 
             <SidebarGroup>
               <SidebarGroupLabel className="px-2 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
-                Information
+                Informationen
               </SidebarGroupLabel>
               <SidebarGroupContent>
                 <SidebarMenu>
@@ -424,7 +424,7 @@ export default function Layout({ children, currentPageName }) {
             {!isGuestMode && (
               <SidebarGroup>
                 <SidebarGroupLabel className="px-2 py-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-white/35">
-                  Quick Stats
+                  Schnellstatistik
                 </SidebarGroupLabel>
                 <SidebarGroupContent>
                   <div className="px-3 py-2 space-y-2">

@@ -242,7 +242,7 @@ export default function Templates() {
                         className="w-full group-hover:bg-blue-50 group-hover:border-blue-200"
                       >
                         <Eye className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
-                        Preview
+                        Vorschau
                       </Button>
                     </Link>
                     <Button 
