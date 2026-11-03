@@ -17,6 +17,7 @@ import ATSChecker from './pages/ATSChecker';
 import CoverLetter from './pages/CoverLetter';
 import StudentEventLanding from './pages/StudentEventLanding';
 import EventDetails from './pages/EventDetails';
+import Datenschutz from './pages/Datenschutz';
 import Layout from './Layout.jsx';
 
 
@@ -40,6 +41,7 @@ export const PAGES = {
     "CoverLetter": CoverLetter,
     "StudentEventLanding": StudentEventLanding,
     "EventDetails": EventDetails,
+    "Datenschutz": Datenschutz,
 }
 
 export const pagesConfig = {
